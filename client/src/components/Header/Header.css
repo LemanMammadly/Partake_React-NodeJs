@@ -1,4 +1,4 @@
-header{
+.containerheader{
     background-color: #fabfa8;
     border-top: .2px solid #EBF1F7;
 }
@@ -379,4 +379,10 @@ header{
 }
 
 
-
+.pink{
+    background-color: #fabfa8;
+}
+  
+.white{
+    background-color:#fff;
+}

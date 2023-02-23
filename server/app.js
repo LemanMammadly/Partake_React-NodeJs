@@ -7,6 +7,7 @@ const { default: mongoose } = require('mongoose');
 
 const categoryRouter=require('./routes/CategoryRoutes')
 const productRouter=require('./routes/ProductRoutes')
+const logoRouter=require('./routes/LogoRoutes')
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/category',categoryRouter)
 app.use('/product',productRouter)
+app.use('/logo',logoRouter)
 
 
 const connect=async()=>{
