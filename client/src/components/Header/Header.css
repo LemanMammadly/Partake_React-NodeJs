@@ -1,10 +1,11 @@
 .containerheader{
     background-color: #fabfa8;
-    border-top: .2px solid #EBF1F7;
+    border-top: .3px solid #EBF1F7;
 }
 .containerheader{
     padding: 2rem 0rem;
 }
+
 
 .containerheader .left a{
     position: relative;
@@ -376,13 +377,4 @@
         right: 0;
         position: absolute;
     }
-}
-
-
-.pink{
-    background-color: #fabfa8;
-}
-  
-.white{
-    background-color:#fff;
 }

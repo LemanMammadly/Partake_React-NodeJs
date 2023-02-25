@@ -1,0 +1,52 @@
+.aboutstory{
+    padding: 3rem 0 0 0;
+}
+.aboutstory .topaboutstory h2{
+    text-align: center;
+    font-size: 70px;
+    color: #005099;
+    font-weight: 700;
+}
+.aboutstory .boxstory{
+    padding: 2rem 8rem;
+}
+
+.aboutstory .boxstory h2{
+    font-size: 30px;
+    color: #005099;
+    font-weight: 600;
+}
+
+.aboutstory .boxstory p{
+    font-size: 18px;
+    color: #005099;
+}
+
+.aboutstory .boxstory .rightstory{
+    padding: 50px 0 45px 50px;
+}
+
+
+@media(max-width:576px){
+    .aboutstory{
+        padding: 2rem 0 0 0;
+    }
+    .aboutstory .boxstory{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .aboutstory .boxstory .rightstory{
+        padding: 0;
+    }
+    .aboutstory .topaboutstory h2{
+        font-size: 26px;
+    }
+    .aboutstory .boxstory h2{
+    font-size: 24px;
+    margin: 20px 0;
+    }
+    .aboutstory .boxstory p{
+        font-size: 15px;
+    }
+}

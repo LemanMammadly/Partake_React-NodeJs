@@ -1,0 +1,54 @@
+.aboutlinks .alllinksabout .leftlinks {
+    background-color: #92cad6;
+    padding: 2rem;
+    text-decoration: none;
+}
+.aboutlinks .alllinksabout .leftlinks span{
+    font-size: 45px;
+    color: #005099;
+    font-weight: 700;
+}
+
+
+.aboutlinks .alllinksabout .rightlinks {
+    background-color: #bdc5f1;
+    padding: 2rem;
+    text-decoration: none;
+}
+.aboutlinks .alllinksabout .rightlinks span{
+    font-size: 45px;
+    color: #005099;
+    font-weight: 700;
+}
+
+
+.aboutlinks .alllinksabout .leftlinks:hover{
+    background-color:#FFC787;
+    transition: .5s;
+}
+
+
+.aboutlinks .alllinksabout .rightlinks:hover{
+    background-color:#FFC787;
+    transition: .5s;
+}
+
+
+@media(max-width:576px){
+    .aboutlinks .alllinksabout{
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutlinks .alllinksabout .leftlinks span{
+        font-size: 28px;
+    }
+    .aboutlinks .alllinksabout .rightlinks span{
+        font-size: 28px;
+    }
+    .aboutlinks .alllinksabout .leftlinks {
+        padding: 1rem;
+    }
+    .aboutlinks .alllinksabout .rightlinks {
+        padding: 1rem;
+    }
+}

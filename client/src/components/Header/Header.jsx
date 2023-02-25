@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Menubar from "../Menubar/Menubar";
 import "./Header.css";
@@ -129,7 +129,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`containerheader col-12`}>
+    <header  style={{background: window.location.pathname === "/" ? "#fabfa8" : "#fff"}} className={`containerheader col-12`}>
       <div className="all d-flex align-items-center justify-content-center col-lg-12 col-12">
         <div className="left col-lg-4 text-center col-2">
           <Link onClick={openMenubar} className="bars" to="/">
@@ -154,7 +154,7 @@ const Header = () => {
         {logo &&
           logo.map((logos, _id) => (
             <div className="center col-lg-4 col-6 text-center">
-              <img id="normimg" src={logos.img[0]} alt="" />
+             {window.location.pathname === "/" ?  <img id="normimg" src={logos.img[0]} alt="" /> :  <img id="normimg" src={logos.img[1]} alt="" /> }
             </div>
           ))}
         <div className="right col-lg-4 col-3 text-center d-flex">

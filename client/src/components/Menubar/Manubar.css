@@ -82,3 +82,9 @@
     top: 240px;
 }
 
+
+.none{
+    display: none;
+    scroll-behavior: smooth;
+}
+

@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Manubar.css'
 
 const Menubar = () => {
+
+    const closeBars=()=>{
+        document.getElementById('menubar').style.display='none'
+        document.body.classList.remove("stop-scrolling");
+    }
+
     const drop1=()=>{
         if(document.querySelector('.dropdown1').style.display==='none'){
             document.querySelector('.dropdown1').style.display='block'
@@ -58,7 +64,7 @@ const Menubar = () => {
             <hr />
             <li onClick={drop2} className='main'>OUR STORY <span><i id='icon2' className="fa-solid fa-caret-down"></i></span></li>
             <ul style={{display:"none"}} className='dropdown dropdown2'>
-                <Link to='/'><li>About Us</li></Link>
+                <Link onClick={closeBars} to='/about'><li>About Us</li></Link>
                 <Link to='/'><li>FAQ</li></Link>
                 <Link to='/'><li>Ingredients</li></Link>
                 <Link to='/'><li>Press</li></Link>

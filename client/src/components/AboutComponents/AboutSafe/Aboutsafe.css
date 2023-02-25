@@ -1,0 +1,68 @@
+.aboutsafe .all{
+    text-align: center;
+    padding: 0 0 3rem 0;
+    background-color: #90DFB9;
+}
+.aboutsafe .topaboutsafe{
+    background-image: url('https://cdn.shopify.com/s/files/1/0012/2296/7353/files/six-dots.svg?v=1640156323');
+    background-repeat: no-repeat;
+    background-size: 700px;
+    background-position:center;
+    padding: 2rem;
+    margin-bottom: 30px;
+}
+
+.aboutsafe .topaboutsafe h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: #005099;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.aboutsafe .topaboutsafe p{
+    font-size: 22px;
+    font-weight: 500;
+    color: #005099;
+}
+
+.aboutsafe .bottomaboutsafe{
+    gap: 40px;
+
+}
+
+.aboutsafe .bottomaboutsafe p{
+    font-size: 18px;
+    font-weight: 450;
+    margin-top: 20px;
+    color: #005099;
+}
+
+.aboutsafe .bottomaboutsafe .icondiv{
+    font-size: 90px;
+    color: #005099;
+    border: 2px solid #005099;
+    border-radius: 50%;
+    padding: 10px 15px;
+}
+
+
+@media(max-width:576px){
+    .aboutsafe .topaboutsafe h2{
+        font-size: 30px;
+    }
+    
+    .aboutsafe .topaboutsafe p{
+        font-size: 18px;
+    }
+    .aboutsafe .bottomaboutsafe p{
+        font-size: 16px;
+    }
+    .aboutsafe .all .bottomaboutsafe{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .aboutsafe .bottomaboutsafe .icondiv{
+        font-size: 75px;
+    }
+}

@@ -1,0 +1,20 @@
+.abouticons{
+    padding: 3rem 0 ;
+}
+
+.abouticons .alliconsabout{
+    font-size: 60px;
+    color: #005099;
+    gap: 30px;
+}
+
+
+@media(max-width:576px){
+    .abouticons{
+        padding: 2rem 3rem;
+    }
+    .abouticons .alliconsabout{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
