@@ -17,7 +17,7 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path === "/about") {
+    } else if (path === "/about" || path=== '/press') {
       document.getElementById("allproduct").style.display = "block";
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
@@ -31,7 +31,7 @@ const Header = () => {
       document.querySelector(".containerheader").style.backgroundColor =
         "#fabfa8";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path === "/about") {
+    } else if (path === "/about" || path=== '/press') {
       document.getElementById("allproduct").style.display = "none";
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
@@ -45,7 +45,7 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path === "/about") {
+    } else if (path === "/about" || path=== '/press') {
       document.getElementById("allstory").style.display = "block";
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
@@ -59,7 +59,7 @@ const Header = () => {
       document.querySelector(".containerheader").style.backgroundColor =
         "#fabfa8";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path === "/about") {
+    } else if (path === "/about" || path=== '/press') {
       document.getElementById("allstory").style.display = "none";
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
@@ -73,7 +73,7 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path === "/about") {
+    } else if (path === "/about" || path=== '/press') {
       document.getElementById("allblog").style.display = "block";
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
@@ -87,7 +87,7 @@ const Header = () => {
       document.querySelector(".containerheader").style.backgroundColor =
         "#fabfa8";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path === "/about") {
+    } else if (path === "/about" || path=== '/press') {
       document.getElementById("allblog").style.display = "none";
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
