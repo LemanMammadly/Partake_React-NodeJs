@@ -1,0 +1,93 @@
+.highlights{
+    padding: 4rem;
+    margin: 0 100px;
+}
+
+.highlights .allhighlights{
+    padding-left: 0;
+    display: flex;
+    text-align: center !important;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.highlights h2{
+    font-size: 55px;
+    color: #005099;
+    font-weight: bold;
+    line-height: 66px;
+    margin-bottom: 30px;
+}
+
+.highlights .highlightbox{
+    background-color: #FFF0D8;
+    padding: 45px 30px;
+    border-radius: 2px;
+    text-align: center;
+    width: 32%;
+}
+.highlights  a{
+    text-decoration: none;
+}
+
+.highlights .highlightbox .highlighttitle{
+    font-size: 30px;
+    min-height: 54px;
+    line-height: 35px;
+    color: #005099;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+.highlights .highlightbox h3{
+    font-size: 18px;
+    color: #005099;
+    font-weight: 500;
+    min-height: 100px;
+    line-height: 24px;
+    margin-bottom: 60px;
+}
+
+.highlights .highlightbox .higlightdate{
+    font-size: 18px;
+    color: #005099;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+
+@media(max-width:576px){
+    .highlights{
+        padding: 3rem 1rem;
+        margin: 0;
+    }
+    .highlights .highlightbox{
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+    .highlights .highlightbox .highlighttitle{
+        font-size: 24px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+    }
+    .highlights .highlightbox h3{
+        font-size: 14px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .highlights .highlightbox .higlightdate{
+        font-size: 18px;
+        text-align: left;
+    }
+    .highlights .highlighttext{
+        padding-left: 25px;
+        padding-right: 0;
+        width: 70%;
+    }
+}

@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
           <div className="topcenter col-lg-4">
             <ul>
-              <Link to="/">
+              <Link to='/press'>
                 <li>PRESS</li>
               </Link>
               <Link to="/">

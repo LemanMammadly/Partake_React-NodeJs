@@ -67,7 +67,7 @@ const Menubar = () => {
                 <Link onClick={closeBars} to='/about'><li>About Us</li></Link>
                 <Link to='/'><li>FAQ</li></Link>
                 <Link to='/'><li>Ingredients</li></Link>
-                <Link to='/'><li>Press</li></Link>
+                <Link onClick={closeBars} to='/press'><li>Press</li></Link>
             </ul>
             <hr />
             <Link to='/'><li className='main'>INGREDIENTS</li></Link>

@@ -283,7 +283,7 @@ const Header = () => {
                 alt=""
               />
               <br />
-              <Link className="p" to="/">
+              <Link onClick={()=>window.reload()} className="p" to="/press">
                 PRESS
               </Link>
             </div>
