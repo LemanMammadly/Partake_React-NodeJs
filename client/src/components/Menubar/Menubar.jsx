@@ -66,11 +66,11 @@ const Menubar = () => {
             <ul style={{display:"none"}} className='dropdown dropdown2'>
                 <Link onClick={closeBars} to='/about'><li>About Us</li></Link>
                 <Link to='/'><li>FAQ</li></Link>
-                <Link to='/'><li>Ingredients</li></Link>
+                <Link onClick={closeBars} to='/ingredients'><li>Ingredients</li></Link>
                 <Link onClick={closeBars} to='/press'><li>Press</li></Link>
             </ul>
             <hr />
-            <Link to='/'><li className='main'>INGREDIENTS</li></Link>
+            <Link onClick={closeBars} to='/ingredients'><li className='main'>INGREDIENTS</li></Link>
             <hr />
             <Link to='/'><li className='main'>FIND US</li></Link>
             <hr />

@@ -1,0 +1,65 @@
+.ingredientstart{
+    margin: 100px 145px;
+    padding: 0 50px;
+}
+.ingredientstart .righttingredientstart{
+    padding: 20px 0 20px 50px;
+}
+
+.ingredientstart .leftingredientstart{
+    padding: 0;
+}
+
+.ingredientstart .righttingredientstart h2{
+    color: #005099;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.ingredientstart .righttingredientstart p{
+    color: #005099;
+    font-size: 18px;
+    line-height: 1.56;
+    margin-bottom: 45px;
+}
+
+.ingredientstart .righttingredientstart a{
+    color: #005099;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 4px solid #91DFB9;
+}
+
+.ingredientstart .righttingredientstart a:hover{
+    color: #91DFB9;
+    border-color: #005099;
+    transition: .5s;
+}
+
+
+
+@media(max-width:576px){
+    .ingredientstart{
+        margin: 50px 0 35px;
+        padding: 0 15px;
+    }
+    .ingredientstart .allingredientstart{
+        display: flex;
+        flex-direction: column;
+    }
+    .ingredientstart .righttingredientstart{
+        padding: 1.5rem 0;
+    }
+    .ingredientstart .righttingredientstart h2{
+        font-size: 26px;
+    }
+    
+    .ingredientstart .righttingredientstart p{
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    .ingredientstart .righttingredientstart a{
+        font-size: 15px;
+    }
+}

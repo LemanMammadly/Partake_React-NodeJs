@@ -9,7 +9,7 @@ const AboutLinks = () => {
             <Link to='/press' className="leftlinks col-lg-6 col-12 text-center">
                 <span>Press</span>
             </Link> 
-            <Link to='/' className="rightlinks col-lg-6 col-12 text-center">
+            <Link to='/ingredients' className="rightlinks col-lg-6 col-12 text-center">
                  <span>Ingredients</span>
             </Link>
         </div>

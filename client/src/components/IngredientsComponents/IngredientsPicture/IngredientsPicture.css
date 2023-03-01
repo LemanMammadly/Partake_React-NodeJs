@@ -1,0 +1,131 @@
+.ingredientspicture{
+    background-color: #90DFB9;
+    padding: 104px 40px;
+}
+.ingredientspicture .allingredientspicture{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 0 50px;
+}
+
+.ingredientspicture .allingredientspicture .imgdiv{
+    width:280px;
+    position: relative;
+}
+
+.ingredientspicture .allingredientspicture .imgdiv img{
+    width: 55%;
+}
+
+.ingredientspicture .allingredientspicture .imgdiv .openText{
+    cursor: pointer;
+    position: absolute;
+    left: 85px;
+    color: #fff;
+    font-size: 13px;
+    background-color: #007367;
+    border-radius: 50%;
+    padding: 5px 6px;
+    font-weight: 200;
+}
+
+.ingredientspicture .textdivopen{
+    border: 1px solid #005099;
+}
+
+.ingredientspicture .fromdiv{
+    color: #005099;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+}
+
+.ingredientspicture .fromdiv::after{
+    content: '';
+    height: 1px;
+    width: 100%;
+    top: 25px;
+    left: 0;
+    background-color: #005099;
+    position: absolute;
+}
+
+.ingredientspicture .allingredientspicture .imgdiv .openTextblock{
+    transform: rotate(45deg);
+    transition: .3s ease-in-out;
+    background-color: #fff !important;
+    color: #007367 !important;
+}
+
+.ingredientspicture .allingredientspicture .imgdiv .openTextnone{
+    transform: rotate(0deg);
+    transition: .3s ease-in-out;
+    background-color: #007367 !important;
+    color: #fff !important;
+}
+
+.ingredientspicture .allingredientspicture .ginger, .vanilla , .oat , .flax, .rose , .cinnamon , .oatflour, .chocolate , .buckwheat, .cassava , .sugar , .cane{
+    background-color: #fff;
+    border-radius: 0px;
+    padding: 10px;
+    position: absolute;
+    top:18px;
+    left: 105px;
+    width: 190px;
+    z-index: 1;
+} 
+
+
+
+.ingredientspicture .allingredientspicture .ginger h5, .vanilla h5, .oat h5 , .flax h5 , .rose h5 , .cinnamon h5, .oatflour h5, .chocolate h5, .buckwheat h5, .cassava h5 , .sugar h5 , .cane h5{
+    color: #005099;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.ingredientspicture .allingredientspicture .ginger p,.vanilla p, .oat p , .flax p, .rose p , .cinnamon p , .oatflour p, .chocolate p, .buckwheat p, .cassava p , .sugar p , .cane p{
+    color: #005099;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 8px;
+    padding: 10px;
+}
+ 
+
+.ingredientspicture .allingredientspicture .none{
+    display: none;
+}
+.ingredientspicture .allingredientspicture .block{
+    display: block;
+}
+
+
+
+@media(max-width:576px){
+    .ingredientspicture{
+        padding: 2rem;
+    }
+    .ingredientspicture .allingredientspicture{
+        padding: 0px;
+    }
+    .ingredientspicture .allingredientspicture .imgdiv{
+        width:100px;
+        position: relative;
+    }
+    
+    .ingredientspicture .allingredientspicture .imgdiv img{
+        width: 65%;
+    }
+    .ingredientspicture .allingredientspicture .imgdiv .openText{
+        left: 0px;
+    }
+    .ingredientspicture .allingredientspicture .ginger, .vanilla , .oat , .flax, .rose , .cinnamon , .oatflour, .chocolate , .buckwheat, .cassava , .sugar , .cane{
+        top:0px;
+        left: -45px;
+    } 
+}

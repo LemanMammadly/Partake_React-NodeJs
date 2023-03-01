@@ -1,0 +1,70 @@
+.ingredientsheader{
+    background-color: #8F9AF3;
+}
+
+.ingredientsheader .allingredientsheader{
+    padding: 80px 0;
+}
+
+.ingredientsheader h1{
+    font-size: 75px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.ingredientsheader p{
+    font-size: 22px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.ingredientsheader .img-mob{
+    display: none;
+}
+
+.ingredientsheader .leftingredientsheader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ingredientsheader .rightingredientsheader img{
+    width: 78%;
+}
+
+
+@media(max-width:576px){
+    .ingredientsheader .allingredientsheader{
+        padding: 40px 0;
+    }    
+    .ingredientsheader .img-norm{
+        display: none;
+    }
+    .ingredientsheader .img-mob{
+        display: block;
+    }
+    .ingredientsheader .allingredientsheader{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ingredientsheader h1{
+        font-size: 40px;
+        color: #005099;
+    }
+
+    .ingredientsheader p{
+        font-size: 16px;
+        color: #005099;
+    }
+    .ingredientsheader .rightingredientsheader{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ingredientsheader .rightingredientsheader img{
+        width: 95%;
+    }
+}
