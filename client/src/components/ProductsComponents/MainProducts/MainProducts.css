@@ -1,0 +1,44 @@
+.mainproducts{
+    padding: 4rem 0;
+}
+.mainproducts .leftmainproducts ul{
+    list-style-type: none;
+}
+
+.mainproducts .selectiondiv{
+    display: none;
+}
+
+.mainproducts .leftmainproducts ul li{
+    padding:  0 0 25px;
+}
+
+.mainproducts .leftmainproducts a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #005099;
+    line-height: 1.67;
+    font-weight: 500;
+}
+
+
+
+@media(max-width:576px){
+    .mainproducts{
+        padding: 2rem 0;
+    }
+    .mainproducts .selectiondiv{
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        padding: 10px;
+        border: 1px solid #005099;
+        margin-bottom: 20px;
+    }
+
+    .mainproducts .mainul{
+        padding: 0;
+        opacity: 0;
+        height: 0;
+    }
+}

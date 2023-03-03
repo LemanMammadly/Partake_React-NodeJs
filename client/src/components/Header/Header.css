@@ -13,6 +13,7 @@
     color: #005099;
     font-weight: 700;
     text-decoration: none;
+    z-index: 3333333;
 }
 
 .containerheader .left a:after{
@@ -272,6 +273,7 @@
     font-weight: 700;
 }
 
+
 .basket  span{
     font-weight: 500;
     font-size: 18px;
@@ -318,6 +320,10 @@
 }
 
 #menubar{
+    display: none;
+}
+
+.hideindesktop{
     display: none;
 }
 
@@ -376,5 +382,18 @@
         top: -25px;
         right: 0;
         position: absolute;
+    }
+
+    .hideinmobile{
+        display: none;
+    }
+    .hideindesktop{
+        display: block;
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100% !important;
     }
 }

@@ -22,6 +22,16 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
+    }else if(path==='/products'){
+      document.getElementById("allproduct").style.display = "block";
+      document.getElementById("normimg").src = logo[0].img[1];
+      document.getElementById("allproduct").style.padding="-10rem 0";
+      document.querySelector(".containerheader").style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2048px-Solid_white.svg.png)";
+      document.querySelector(".containerheader").style.transition = ".5s";
+      const allLink = document.getElementsByClassName("link");
+      for (let i = 0; i < allLink.length; i++) {
+        allLink[i].style.color = "#005099";
+      }
     }
   };
   const hide = () => {
@@ -36,6 +46,15 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
+    }else if(path==='/products'){
+      document.getElementById("allproduct").style.display = "none";
+      document.getElementById("normimg").src = logo[0].img[0];
+      document.querySelector(".containerheader").style.backgroundImage ="url(https://cdn.shopify.com/s/files/1/0012/2296/7353/files/Untitled_design_-_2022-05-09T181037.683.png?v=1652134275)"
+      document.querySelector(".containerheader").style.transition = ".5s";
+      const allLink = document.getElementsByClassName("link");
+      for (let i = 0; i < allLink.length; i++) {
+        allLink[i].style.color = "#fff";
+      }
     }
   };
 
@@ -51,6 +70,16 @@ const Header = () => {
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
     }
+    else if(path==='/products'){
+      document.getElementById("allstory").style.display = "block";
+      document.getElementById("normimg").src = logo[0].img[1];
+      document.querySelector(".containerheader").style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2048px-Solid_white.svg.png)";
+      document.querySelector(".containerheader").style.transition = ".5s";
+      const allLink = document.getElementsByClassName("link");
+      for (let i = 0; i < allLink.length; i++) {
+        allLink[i].style.color = "#005099";
+      }
+    }
   };
   const hideStory = () => {
     if (path === "/") {
@@ -64,6 +93,16 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
+    }
+    else if(path==='/products'){
+      document.getElementById("allstory").style.display = "none";
+      document.getElementById("normimg").src = logo[0].img[0];
+      document.querySelector(".containerheader").style.backgroundImage ="url(https://cdn.shopify.com/s/files/1/0012/2296/7353/files/Untitled_design_-_2022-05-09T181037.683.png?v=1652134275)"
+      document.querySelector(".containerheader").style.transition = ".5s";
+      const allLink = document.getElementsByClassName("link");
+      for (let i = 0; i < allLink.length; i++) {
+        allLink[i].style.color = "#fff";
+      }
     }
   };
 
@@ -79,6 +118,16 @@ const Header = () => {
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
     }
+    else if(path==='/products'){
+      document.getElementById("allblog").style.display = "block";
+      document.getElementById("normimg").src = logo[0].img[1];
+      document.querySelector(".containerheader").style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2048px-Solid_white.svg.png)";
+      document.querySelector(".containerheader").style.transition = ".5s";
+      const allLink = document.getElementsByClassName("link");
+      for (let i = 0; i < allLink.length; i++) {
+        allLink[i].style.color = "#005099";
+      }
+    }
   };
   const hideBlog = () => {
     if (path === "/") {
@@ -92,6 +141,16 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
+    }
+    else if(path==='/products'){
+      document.getElementById("allblog").style.display = "none";
+      document.getElementById("normimg").src = logo[0].img[0];
+      document.querySelector(".containerheader").style.backgroundImage ="url(https://cdn.shopify.com/s/files/1/0012/2296/7353/files/Untitled_design_-_2022-05-09T181037.683.png?v=1652134275)"
+      document.querySelector(".containerheader").style.transition = ".5s";
+      const allLink = document.getElementsByClassName("link");
+      for (let i = 0; i < allLink.length; i++) {
+        allLink[i].style.color = "#fff";
+      }
     }
   };
 
@@ -129,50 +188,53 @@ const Header = () => {
   };
 
   return (
-    <header  style={{background: window.location.pathname === "/" ? "#fabfa8" : "#fff"}} className={`containerheader col-12`}>
+    <header  className={`containerheader col-12`}  style={{background: window.location.pathname === "/" ? "#fabfa8" : "#fff" , backgroundImage : window.location.pathname==='/products' ? "url(https://cdn.shopify.com/s/files/1/0012/2296/7353/files/Untitled_design_-_2022-05-09T181037.683.png?v=1652134275)" : " " , paddingBottom:  window.location.pathname==='/products' ? "254px" : '' , backgroundSize: window.location.pathname==='/products' ? "100%" : '', backgroundRepeat:window.location.pathname==='/products' ? "no-repeat" : '' }} >
+      <div className="hideindesktop" style={{backgroundImage:window.location.pathname==='/products' ? "url(https://cdn.shopify.com/s/files/1/0012/2296/7353/files/MA_Partake_5-layers_1.5x.png?v=1640863314)" : '' , backgroundSize:window.location.pathname==='/products' ? '100%' : '', backgroundPosition: window.location.pathname==='/products' ? 'center' : ''}}></div>
       <div className="all d-flex align-items-center justify-content-center col-lg-12 col-12">
         <div className="left col-lg-4 text-center col-2">
-          <Link onClick={openMenubar} className="bars" to="/">
-            <i class="fa-solid fa-bars"></i>
+          <Link onClick={openMenubar} className="bars" to="">
+            <i style={{color:  window.location.pathname==='/products' ? 'white' : ''}} className="fa-solid fa-bars link"></i>
           </Link>
-          <Link className="search" to="/">
-            <i onClick={openSearch} class="fa-solid fa-magnifying-glass"></i>
+          <Link className="search" to="">
+            <i style={{color:  window.location.pathname==='/products' ? 'white' : ''}} onClick={openSearch} className="fa-solid fa-magnifying-glass link"></i>
           </Link>
           <Link
             onMouseEnter={showProducts}
             onMouseLeave={hide}
-            className="productslink"
-            to="/"
+            className="productslink link"
+            to="/products"
+            onClick={()=>window.reload()}
+            style={{color:  window.location.pathname==='/products' ? 'white' : ''}}
           >
             Products
           </Link>
-          <Link onMouseEnter={showStory} onMouseLeave={hideStory} to="/">
+          <Link className="link" onMouseEnter={showStory} onMouseLeave={hideStory} to="/"  style={{color:  window.location.pathname==='/products' ? 'white' : ''}}>
             Our Story
           </Link>
-          <Link to="/ingredients">Ingredients</Link>
+          <Link className="link" to="/ingredients"  style={{color:  window.location.pathname==='/products' ? 'white' : ''}}>Ingredients</Link>
         </div>
         {logo &&
           logo.map((logos, _id) => (
             <div className="center col-lg-4 col-6 text-center">
-             {window.location.pathname === "/" ?  <img id="normimg" src={logos.img[0]} alt="" /> :  <img id="normimg" src={logos.img[1]} alt="" /> }
+             {window.location.pathname === "/" || window.location.pathname==='/products' ?  <img id="normimg" src={logos.img[0]} alt="" /> :  <img id="normimg" src={logos.img[1]} alt="" /> }
             </div>
           ))}
         <div className="right col-lg-4 col-3 text-center d-flex">
           <div className="rightlinks">
-            <Link to="/">Find Us</Link>
-            <Link onMouseEnter={showBlog} onMouseLeave={hideBlog} to="/">
+            <Link className="link" to="/"  style={{color:  window.location.pathname==='/products' ? 'white' : ''}}>Find Us</Link>
+            <Link className="link" onMouseEnter={showBlog} onMouseLeave={hideBlog} to="/"  style={{color:  window.location.pathname==='/products' ? 'white' : ''}}>
               Blog
             </Link>
           </div>
-          <div className="icons">
-            <Link className="searchNorm" to="/">
-              <i onClick={openSearch} class="fa-solid fa-magnifying-glass"></i>
+          <div className="icons" >
+            <Link className="searchNorm" to="/" >
+              <i style={{color:  window.location.pathname==='/products' ? 'white' : ''}} onClick={openSearch} class="fa-solid fa-magnifying-glass link"></i>
             </Link>
             <Link className="user" to="/">
-              <i class="fa-regular fa-user"></i>
+              <i style={{color:  window.location.pathname==='/products' ? 'white' : ''}} class="fa-regular fa-user link"></i>
             </Link>
             <Link to="/">
-              <i onClick={openBasket} class="fa-solid fa-dolly"></i>
+              <i style={{color:  window.location.pathname==='/products' ? 'white' : ''}} onClick={openBasket} class="fa-solid fa-dolly link"></i>
             </Link>
           </div>
         </div>
