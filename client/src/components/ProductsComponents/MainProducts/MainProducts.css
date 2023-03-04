@@ -1,8 +1,18 @@
 .mainproducts{
-    padding: 4rem 0;
+    padding: 4rem 50px;
+    margin: 0 24px;
+}
+.mainproducts .leftmainproducts{
+    align-self: flex-start;
+    position: sticky;
+    top: 20px;
 }
 .mainproducts .leftmainproducts ul{
     list-style-type: none;
+}
+
+.mainproducts .leftmainproducts .mainul{
+    padding-left: 0 !important;
 }
 
 .mainproducts .selectiondiv{
@@ -13,6 +23,7 @@
     padding:  0 0 25px;
 }
 
+
 .mainproducts .leftmainproducts a{
     text-decoration: none;
     font-size: 18px;
@@ -21,6 +32,9 @@
     font-weight: 500;
 }
 
+.mainproducts .rightmainproducts{
+    padding:  0;
+}
 
 
 @media(max-width:576px){
@@ -40,5 +54,12 @@
         padding: 0;
         opacity: 0;
         height: 0;
+    }
+    .mainproducts .allmainproducts{
+        display: flex;
+        flex-direction: column;
+    }
+    .mainproducts .leftmainproducts{
+        position:static;
     }
 }

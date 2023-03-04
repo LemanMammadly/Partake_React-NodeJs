@@ -1,0 +1,118 @@
+.crunchycookies{
+    padding: 0rem;
+}
+
+.crunchycookies  h2{
+    color: #005099;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.crunchycookies .bottomcrunchycookies{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.crunchycookies .bottomcrunchycookies img{
+    background-color: rgba(199, 200, 202, 0.206);
+    padding: 40px 0;
+    margin: 20px 0;
+}
+
+
+
+.crunchycookies .bottomcrunchycookies .bottombottom{
+    color: #005099;
+    font-size: 15px;
+    font-weight: bold;
+    transition: .3s;
+    padding: 0;
+}
+
+.crunchycookies .bottomcrunchycookies .icondiv{
+    margin-top: -10px;
+}
+
+.crunchycookies .bottomcrunchycookies .icondiv .green {
+    color: #007367;
+}
+
+.crunchycookies .bottomcrunchycookies .icondiv span{
+    font-size: 10px;
+}
+
+.crunchycookies .bottomcrunchycookies .price{
+    color:#81A2C9;
+    font-weight: 500;
+}
+
+
+
+.crunchycookies .bottomcrunchycookies .bottombox{
+    position: relative;
+    width: 33%;
+}
+
+.crunchycookies .bottomcrunchycookies .bottombox:hover .bottombottom{
+    color: #91DFB9;
+}
+
+.crunchycookies .bottomcrunchycookies .bottombox:hover .quickaddbtn{
+    opacity: 1;
+}
+
+.crunchycookies .bottomcrunchycookies .best{
+    position: absolute;
+    top: -15px;
+    right: 35px;
+    text-align: center;
+    color: #005099;
+    font-weight: 800;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 20px 15px;
+    background-color: #91DFB9;
+}
+
+
+.crunchycookies .bottomcrunchycookies .quickaddbtn{
+    position: absolute;
+    bottom:22%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 85%;
+    transition: .3s;
+    opacity: 0;
+}
+
+.crunchycookies .bottomcrunchycookies .quickaddbtn:hover .btn{
+    background-color: #91DFB9;
+    color: #fff;
+    border: 1px solid #91DFB9;
+}
+
+
+
+.crunchycookies .bottomcrunchycookies  .quickaddbtn button{
+    border: none;
+    background-color: #fff;
+    padding: 15px ;
+    width: 100%;
+    outline: none;
+    border: 1px solid #005099;
+    color: #005099;
+    font-weight: 800;
+    font-size: 14px;
+    transition: .3s;
+    border-radius: 0;
+}
+
+
+@media(max-width:576px){
+    .crunchycookies .bottomcrunchycookies .bottombox{
+        width: 100%;
+    }
+}

@@ -51,6 +51,7 @@ const Menubar = () => {
         <ul> 
             <li onClick={drop1} className='main'>PRODUCTS <span><i id='icon1' className="fa-solid fa-caret-down"></i></span></li>
             <ul style={{display:"none"}} className='dropdown dropdown1'>
+                <Link onClick={closeBars} to='/products'><li>Products</li></Link>
                 <Link to='/'><li>Best Sellers</li></Link>
                 <Link to='/'><li>Snack Packs</li></Link>
                 <Link to='/'><li>Gifts</li></Link>

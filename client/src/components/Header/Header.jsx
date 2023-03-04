@@ -192,10 +192,10 @@ const Header = () => {
       <div className="hideindesktop" style={{backgroundImage:window.location.pathname==='/products' ? "url(https://cdn.shopify.com/s/files/1/0012/2296/7353/files/MA_Partake_5-layers_1.5x.png?v=1640863314)" : '' , backgroundSize:window.location.pathname==='/products' ? '100%' : '', backgroundPosition: window.location.pathname==='/products' ? 'center' : ''}}></div>
       <div className="all d-flex align-items-center justify-content-center col-lg-12 col-12">
         <div className="left col-lg-4 text-center col-2">
-          <Link onClick={openMenubar} className="bars" to="">
+          <Link onClick={openMenubar} className="bars" to="#">
             <i style={{color:  window.location.pathname==='/products' ? 'white' : ''}} className="fa-solid fa-bars link"></i>
           </Link>
-          <Link className="search" to="">
+          <Link className="search" to="#">
             <i style={{color:  window.location.pathname==='/products' ? 'white' : ''}} onClick={openSearch} className="fa-solid fa-magnifying-glass link"></i>
           </Link>
           <Link
@@ -227,13 +227,13 @@ const Header = () => {
             </Link>
           </div>
           <div className="icons" >
-            <Link className="searchNorm" to="/" >
+            <Link className="searchNorm" to="" >
               <i style={{color:  window.location.pathname==='/products' ? 'white' : ''}} onClick={openSearch} class="fa-solid fa-magnifying-glass link"></i>
             </Link>
-            <Link className="user" to="/">
+            <Link className="user" to="">
               <i style={{color:  window.location.pathname==='/products' ? 'white' : ''}} class="fa-regular fa-user link"></i>
             </Link>
-            <Link to="/">
+            <Link to="">
               <i style={{color:  window.location.pathname==='/products' ? 'white' : ''}} onClick={openBasket} class="fa-solid fa-dolly link"></i>
             </Link>
           </div>

@@ -20,6 +20,14 @@ const ProductSchema=new mongoose.Schema(
             type:ObjectId,
             ref:"Category"
         },
+        subCategory:{
+            type:ObjectId,
+            ref:"SubCategory"
+        },
+        statusCategory:{
+            type:ObjectId,
+            ref:"Status"
+        },
         img:{
             type:Array,
             required:true
@@ -27,7 +35,8 @@ const ProductSchema=new mongoose.Schema(
         reting:{
             type:Number,
             required:true
-        }
+        },
+        
     },
     { timestamps: true }
 )
