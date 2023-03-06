@@ -1,58 +1,58 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useCrunchy } from "../../Context/CrunchyContext";
-import "./CrunchyCookies.css";
+import { useBreakfatsMix } from "../../Context/BreakfastMixesContext";
+import "./BreakfastMixes.css";
 
-const CrunchyCookies = () => {
-  const { crunchy } = useCrunchy();
+const BreakfastMixes = () => {
+    const {breakfastmix}=useBreakfatsMix()
   return (
-    <section className="crunchycookies">
-      <div className="allcrunchycookies">
-        <h2 id="crunchy">Crunchy Cookies</h2>
-        <div className="bottomcrunchycookies">
-          {crunchy &&
-            crunchy.map((crunchys, _id) => (
-              <div className="bottombox col-lg-12">
+    <section className="breakfastmixes">
+      <div className="allbreakfastmixes">
+        <h2 id="breakfast">Breakfast Mixes</h2>
+        <div className="bottombreakfastmixes">
+          {breakfastmix &&
+            breakfastmix.map((breakfastmixs, _id) => (
+              <div className="bottombreakfast col-lg-12">
                 <div className="bottomtop">
-                  <img className="img-fluid" src={crunchys.img[0]} alt="" />
+                  <img className="img-fluid" src={breakfastmixs.img[0]} alt="" />
                 </div>
-                {crunchys.statusCategory === "6403328368fcefd61e1127ea" && (
+                {breakfastmixs.statusCategory === "6403328368fcefd61e1127ea" && (
                   <div className="best">
                     <span>
                       BEST <br /> SELLER
                     </span>
                   </div>
                 )}
-                {crunchys.statusCategory === "640337e568fcefd61e1127f8" && (
+                {breakfastmixs.statusCategory === "640337e568fcefd61e1127f8" && (
                   <div className="best">
                     <span>
                       LIMITED <br /> EDITION
                     </span>
                   </div>
                 )}
-                {crunchys.statusCategory === "640337cf68fcefd61e1127f7" && (
+                {breakfastmixs.statusCategory === "640337cf68fcefd61e1127f7" && (
                   <div className="best">
                     <span>
                       SOLD <br /> OUT
                     </span>
                   </div>
                 )}
-                <div className="quickaddbtn">
+                <div className="quickaddbtnbreakfast">
                   <Link to="">
                     <button className="btn">QUICK ADD</button>
                   </Link>
                 </div>
                 <div className="bottombottom text-center">
-                  <p>{crunchys.name}</p>
+                  <p>{breakfastmixs.name}</p>
                   <div className="icondiv">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    <span>{crunchys.reting}</span>
+                    <span>{breakfastmixs.reting}</span>
                   </div>
-                  <p className="price">From ${crunchys.price}</p>
+                  <p className="price">From ${breakfastmixs.price}</p>
                 </div>
               </div>
             ))}
@@ -62,4 +62,4 @@ const CrunchyCookies = () => {
   );
 };
 
-export default CrunchyCookies;
+export default BreakfastMixes;

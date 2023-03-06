@@ -1,8 +1,8 @@
-.crunchycookies{
-    padding: 0rem;
+.bakingmixes{
+    padding: 2.5rem 0rem 0 0;
 }
 
-.crunchycookies  h2{
+.bakingmixes  h2{
     color: #005099;
     font-size: 36px;
     font-weight: 700;
@@ -11,64 +11,64 @@
 }
 
 
-.crunchycookies .bottomcrunchycookies{
+.bakingmixes .bottombakingmixes{
     display: flex;
     flex-wrap: wrap;
 }
 
-.crunchycookies .bottomcrunchycookies img{
+.bakingmixes .bottombakingmixes img{
     background-color: rgba(199, 200, 202, 0.206);
     padding: 40px 0;
     margin: 20px 0;
-    height: 350px;
     width: 350px;
+    height: 350px;
     object-fit: cover;
 }
 
 
 
-.crunchycookies .bottomcrunchycookies .bottombottom{
+.bakingmixes .bottombakingmixes .bottombottom{
     color: #005099;
     font-size: 15px;
     font-weight: bold;
     transition: .3s;
-    height: 100px;
     padding: 0;
+    height: 100px;
 }
 
-.crunchycookies .bottomcrunchycookies .icondiv{
+.bakingmixes .bottombakingmixes .icondiv{
     margin-top: -10px;
 }
 
-.crunchycookies .bottomcrunchycookies .icondiv .green {
+.bakingmixes .bottombakingmixes .icondiv .green {
     color: #007367;
 }
 
-.crunchycookies .bottomcrunchycookies .icondiv span{
+.bakingmixes .bottombakingmixes .icondiv span{
     font-size: 10px;
 }
 
-.crunchycookies .bottomcrunchycookies .price{
+.bakingmixes .bottombakingmixes .price{
     color:#81A2C9;
     font-weight: 500;
 }
 
 
 
-.crunchycookies .bottomcrunchycookies .bottombox{
+.bakingmixes .bottombakingmixes .bottombaking{
     position: relative;
     width: 33%;
 }
 
-.crunchycookies .bottomcrunchycookies .bottombox:hover .bottombottom{
+.bakingmixes .bottombakingmixes .bottombaking:hover .bottombottom{
     color: #91DFB9;
 }
 
-.crunchycookies .bottomcrunchycookies .bottombox:hover .quickaddbtn{
+.bakingmixes .bottombakingmixes .bottombaking:hover .quickaddbtnbaking{
     opacity: 1;
 }
 
-.crunchycookies .bottomcrunchycookies .best{
+.bakingmixes .bottombakingmixes .best{
     position: absolute;
     top: -15px;
     right: 35px;
@@ -87,10 +87,9 @@
 }
 
 
-
-.crunchycookies .bottomcrunchycookies .quickaddbtn{
+.bakingmixes .bottombakingmixes .quickaddbtnbaking{
     position: absolute;
-    bottom:23%;
+    bottom: 23%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 85%;
@@ -98,7 +97,7 @@
     opacity: 0;
 }
 
-.crunchycookies .bottomcrunchycookies .quickaddbtn:hover .btn{
+.bakingmixes .bottombakingmixes .quickaddbtnbaking:hover .btn{
     background-color: #91DFB9;
     color: #fff;
     border: 1px solid #91DFB9;
@@ -106,7 +105,7 @@
 
 
 
-.crunchycookies .bottomcrunchycookies  .quickaddbtn button{
+.bakingmixes .bottombakingmixes  .quickaddbtnbaking button{
     border: none;
     background-color: #fff;
     padding: 15px ;
@@ -122,7 +121,7 @@
 
 
 @media(max-width:576px){
-    .crunchycookies .bottomcrunchycookies .bottombox{
+    .bakingmixes .bottombakingmixes .bottombaking{
         width: 100%;
     }
 }

@@ -6,10 +6,14 @@
     letter-spacing: .1rem;
     transition: .5s;
     cursor: pointer;
+    text-decoration: none;
+
 }
 
 .freeshipping:hover{
     background-color: #f0f5f9;
+    text-decoration: none;
+    color: #005099;
 }
 
 .arrow{

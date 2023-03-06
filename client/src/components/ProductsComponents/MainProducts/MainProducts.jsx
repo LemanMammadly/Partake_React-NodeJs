@@ -2,20 +2,29 @@ import React from 'react'
 import './MainProducts.css'
 import {Link} from 'react-router-dom'
 import CrunchyCookies from '../CrunchyCookies/CrunchyCookies'
+import SoftBaked from '../SoftBaked/SoftBaked'
+import Bakingmixes from '../BakingMixes/Bakingmixes'
+import BreakfastMixes from '../BreakfastMixes/BreakfastMixes'
+import VarietyPacks from '../VarietyPacks/VarietyPacks'
 
 const MainProducts = () => {
     const showdrop=()=>{
         if(document.querySelector('.secondul').style.opacity==='0'){
             document.getElementById('icon').style.transform='rotate(180deg)'
             document.getElementById('icon').style.transition='.5s'
+            document.querySelector('.secondul').style.pointerEvents='all'
+            document.querySelector('.secondul').style.cursor='pointer'
             document.querySelector('.secondul').style.height='100%'
             document.querySelector('.secondul').style.transition='.5s'
             document.querySelector('.secondul').style.opacity='1'
+
         }
         else{
             document.getElementById('icon').style.transform='rotate(0deg)'
             document.getElementById('icon').style.transition='.5s'
             document.querySelector('.secondul').style.opacity='0'
+            document.querySelector('.secondul').style.pointerEvents='none'
+            document.querySelector('.secondul').style.cursor='default'
             document.querySelector('.secondul').style.height='0'
             document.querySelector('.secondul').style.transition='.2s'
         }
@@ -46,13 +55,13 @@ const MainProducts = () => {
         </div>
         <ul className='mainul' style={{opacity: window.screen.width <= 576 ? '0' : '1'}}>
             <li className='cookies'><Link onClick={showdrop} >Cookies <i id='icon' class="fa-solid fa-caret-down ml-2"></i></Link></li>
-            <ul className='secondul' style={{opacity:'0', height:'0'}}>
-                <li><a href='#crunchy'>Crunchy Cookies</a></li>
-                <li><Link>Soft Baked Cookies</Link></li>
+            <ul className='secondul' style={{opacity:'0', height:'0',pointerEvents:'none', cursor:"default"}}>
+                <li className='li1'><a href='#crunchy'>Crunchy Cookies</a></li>
+                <li className='li2'><a href='#softbaked'>Soft Baked Cookies</a></li>
             </ul>
-            <li><Link>Baking Mixes</Link></li>
-            <li><Link>Breakfast Mixes</Link></li>
-            <li><Link>Variety Packs</Link></li>
+            <li><a href='#baking'>Baking Mixes</a></li>
+            <li><a href='#breakfast'>Breakfast Mixes</a></li>
+            <li><a href='#variety'>Variety Packs</a></li>
             <li><Link>Snack Packs</Link></li>
             <li><Link>Gifts</Link></li>
             <li><Link>Merch</Link></li>
@@ -60,6 +69,10 @@ const MainProducts = () => {
       </div>
       <div className="rightmainproducts col-lg-9 col-12">
         <CrunchyCookies/>
+        <SoftBaked/>
+        <Bakingmixes/>
+        <BreakfastMixes/>
+        <VarietyPacks/>
       </div>
      </div>
     </section>
