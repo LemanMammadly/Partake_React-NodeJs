@@ -6,6 +6,9 @@ import SoftBaked from '../SoftBaked/SoftBaked'
 import Bakingmixes from '../BakingMixes/Bakingmixes'
 import BreakfastMixes from '../BreakfastMixes/BreakfastMixes'
 import VarietyPacks from '../VarietyPacks/VarietyPacks'
+import SnackPacks from '../SnackPacks/SnackPacks'
+import Gifts from '../Gifts/Gifts'
+import Merch from '../Merch/Merch'
 
 const MainProducts = () => {
     const showdrop=()=>{
@@ -62,9 +65,9 @@ const MainProducts = () => {
             <li><a href='#baking'>Baking Mixes</a></li>
             <li><a href='#breakfast'>Breakfast Mixes</a></li>
             <li><a href='#variety'>Variety Packs</a></li>
-            <li><Link>Snack Packs</Link></li>
-            <li><Link>Gifts</Link></li>
-            <li><Link>Merch</Link></li>
+            <li><a href='#snackpacks'>Snack Packs</a></li>
+            <li><a href='#gifts'>Gifts</a></li>
+            <li><a href='#merch'>Merch</a></li>
         </ul>
       </div>
       <div className="rightmainproducts col-lg-9 col-12">
@@ -73,6 +76,9 @@ const MainProducts = () => {
         <Bakingmixes/>
         <BreakfastMixes/>
         <VarietyPacks/>
+        <SnackPacks/>
+        <Gifts/>
+        <Merch/>
       </div>
      </div>
     </section>
