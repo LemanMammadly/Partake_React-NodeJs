@@ -1,0 +1,40 @@
+.prodimgboxes{
+    padding: 3rem 0;
+}
+.prodimgboxes img{
+    position: relative;
+}
+
+.prodimgboxes .prodimgtext{
+    position: absolute;
+    z-index: 2222222;
+    top: 10px;
+    padding: 1rem 2rem;
+}
+
+.prodimgboxes h3{
+    font-size: 30px;
+    font-weight: bold;
+    color: #005099;
+}
+
+.prodimgboxes .white{
+    color: #fff;
+}
+
+
+@media(max-width:576px){
+    .prodimgboxes .prodimgbox{
+        padding-top: 20px;
+    }
+    .prodimgboxes h3{
+        font-size: 24px;
+    }
+    .prodimgboxes .prodimgtext{
+        position: absolute;
+        z-index: 2222222;
+        top: 20px;
+        left: 0;
+        padding: 1rem 1.5rem;
+    }
+}
