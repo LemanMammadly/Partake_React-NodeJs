@@ -1,0 +1,35 @@
+.terms {
+    padding: 3rem 0;
+}
+
+.terms .termsheader{
+    position: relative;
+}
+
+.terms .termsheader:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://cdn.shopify.com/s/files/1/0012/2296/7353/files/11-layers.svg?v=1639121522');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+
+.terms h1{
+    color: #005099;
+    font-size: 70px;
+    margin: 0 0 65px;
+    font-weight: bold;
+}
+
+.terms .termstext{
+    font-size: 19px;
+    color: #005099;
+    opacity: 0.9;
+    line-height: 1.56;
+}

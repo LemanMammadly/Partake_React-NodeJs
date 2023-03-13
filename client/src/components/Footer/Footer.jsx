@@ -31,7 +31,7 @@ const Footer = () => {
               <Link to='/press'>
                 <li>PRESS</li>
               </Link>
-              <Link to="/">
+              <Link to="/terms">
                 <li>TERMS</li>
               </Link>
               <Link to="/">

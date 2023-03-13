@@ -69,6 +69,7 @@
 }
 
 .containerheader .right .icons i{
+    cursor: pointer;
     margin-left: 20px;
     color: #005099;
     font-weight: 600;
@@ -250,7 +251,7 @@
     right: 0;
     content: ' ';
     background: rgba(0,0,0,.5);
-    z-index: 2222222;
+    z-index: 33333333;
 }
 
 #basket{
@@ -268,7 +269,7 @@
 }
 
 
-.basket .header{
+.basket .headers{
     color: #005099;
     font-weight: 700;
 }
@@ -310,7 +311,7 @@
     right: 0;
     content: ' ';
     background: rgba(0,0,0,.5);
-    z-index: 222222;
+    z-index: 3333333;
 }
 
 
