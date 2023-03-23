@@ -10,7 +10,7 @@ export const BreakfatsMixContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/product")
+      .get("http://localhost:3030/product")
       .then((res) => setBreakfastmix(res.data.products.filter(x=>x.category[0]==="6405f732d5d05f50587935a1")))
       .catch((error) => console.log(error));
   }, []);

@@ -10,7 +10,7 @@ export const LogoProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/logo")
+      .get("http://localhost:3030/logo")
       .then((res) => setLogo(res.data.logos))
       .catch((error) => console.log(error));
   }, []);

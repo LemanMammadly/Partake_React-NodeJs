@@ -36,7 +36,7 @@ const connect=async()=>{
         console.log("mongoDB disconnected");
     });
     
-    app.listen(5000,()=>{
+    app.listen(3030,()=>{
         connect();
         console.log("Connected to backend!");
     } )

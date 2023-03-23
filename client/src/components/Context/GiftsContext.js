@@ -10,7 +10,7 @@ export const GiftsContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/product")
+      .get("http://localhost:3030/product")
       .then((res) => setGifts(res.data.products.filter(x=>x.category[0]==="6409bb96aad20645b3532c37")))
       .catch((error) => console.log(error));
   }, []);

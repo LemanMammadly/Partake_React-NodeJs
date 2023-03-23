@@ -10,7 +10,7 @@ export const BakingMixContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/product")
+      .get("http://localhost:3030/product")
       .then((res) => setBakingmix(res.data.products.filter(x=>x.category[0]==="6405cc6ad5d05f505879359c")))
       .catch((error) => console.log(error));
   }, []);

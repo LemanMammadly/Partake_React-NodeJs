@@ -242,7 +242,7 @@ const Header = () => {
       ></div>
       <div className="all d-flex align-items-center justify-content-center col-lg-12 col-12">
         <div className="left col-lg-4 text-center col-2">
-          <Link onClick={openMenubar} className="bars" to="">
+          <Link onClick={openMenubar} className="bars">
             <i
               style={{
                 color: window.location.pathname === "/products" ? "white" : "",
@@ -250,7 +250,7 @@ const Header = () => {
               className="fa-solid fa-bars link"
             ></i>
           </Link>
-          <Link className="search" to="">
+          <Link className="search" >
             <i
               style={{
                 color: window.location.pathname === "/products" ? "white" : "",

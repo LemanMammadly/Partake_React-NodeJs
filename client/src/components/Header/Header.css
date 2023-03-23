@@ -207,7 +207,7 @@
 #search{
     background-color: #fff;
     padding: 15px 0;
-    margin-top: -63px;
+    margin-top: -65px;
     z-index: 33333333;
     position: absolute;
 }
@@ -341,7 +341,7 @@
     .containerheader .right .rightlinks a{
         display: none;
     }
-    .containerheader .right .icons .searchNorm{
+    .containerheader .right .icons .fa-magnifying-glass{
         display: none;
     }
     .containerheader .center img{

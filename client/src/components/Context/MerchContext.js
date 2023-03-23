@@ -10,7 +10,7 @@ export const MerchContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/product")
+      .get("http://localhost:3030/product")
       .then((res) => setMerch(res.data.products.filter(x=>(x.category[0]==="6409c6a5aad20645b3532c3f")|| (x.category[1]==="6409c6a5aad20645b3532c3f"))))
       .catch((error) => console.log(error));
   }, []);

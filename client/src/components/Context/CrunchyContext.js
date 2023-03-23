@@ -10,7 +10,7 @@ export const CrunchyContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/product")
+      .get("http://localhost:3030/product")
       .then((res) => setCrunchy(res.data.products.filter(x=>x.category[0]==="6403108990e3a5a7a19f1238")))
       .catch((error) => console.log(error));
   }, []);

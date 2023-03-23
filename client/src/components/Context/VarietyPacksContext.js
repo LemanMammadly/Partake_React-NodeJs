@@ -9,7 +9,7 @@ export const VarietyPacksContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/product")
+      .get("http://localhost:3030/product")
       .then((res) => setVariety(res.data.products.filter(x=>(x.category[0]==="640601b2d5d05f50587935a4") ||(x.category[1]==="640601b2d5d05f50587935a4") )))
       .catch((error) => console.log(error));
   }, []);

@@ -10,7 +10,7 @@ export const SnackPacksContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/product")
+      .get("http://localhost:3030/product")
       .then((res) => setSnackpacks(res.data.products.filter(x=>x.category[0]==="6409b028aad20645b3532c2e")))
       .catch((error) => console.log(error));
   }, []);
