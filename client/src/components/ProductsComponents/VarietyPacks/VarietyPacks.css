@@ -124,4 +124,8 @@
     .varietypacks .bottomvarietypacks .bottomvariety{
         width: 100%;
     }
+    .varietypacks .bottomtop img{
+        width: 100%;
+        height: 100%;
+    }
 }

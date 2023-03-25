@@ -124,4 +124,8 @@
     .breakfastmixes .bottombreakfastmixes .bottombreakfast{
         width: 100%;
     }
+    .breakfastmixes .bottomtop img{
+        width: 100%;
+        height: 100%;
+    }
 }

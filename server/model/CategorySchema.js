@@ -1,4 +1,5 @@
 const mongoose=require('mongoose')
+const { ObjectId } = mongoose.Schema;
 
 
 const CategorySchema= new mongoose.Schema(
@@ -8,6 +9,10 @@ const CategorySchema= new mongoose.Schema(
             unique:true,
             required:true
         },
+        subcategory:{
+            type:[ObjectId],
+            ref:"SubCategory"
+        }
     },
     {timestamps:true}
 );

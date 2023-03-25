@@ -4,9 +4,17 @@ import Menubar from "../Menubar/Menubar";
 import "./Header.css";
 import { useLogo } from "../Context/LogoContext";
 import { useLocation } from "react-router-dom";
+import { useCategory } from "../Context/CategoryContext";
 
 const Header = () => {
   const { logo } = useLogo();
+  const {snack}=useCategory([]);
+  
+  const snack_id = snack?.map(item => {
+    return item._id
+  })
+  console.log(snack_id);
+
   const location = useLocation();
   const path = location.pathname;
 
@@ -212,6 +220,7 @@ const Header = () => {
     document.body.classList.add("stop-scrolling");
   };
 
+
   return (
     <header
       className={`containerheader col-12`}
@@ -358,19 +367,18 @@ const Header = () => {
           <div className="leftpmenu col-lg-3  text-left mt-3">
             <ul>
               <li>
-                <a href="/">Best Sellers</a>
+                <Link to=''>Best Sellers</Link>
               </li>
               <li>
-                <a href="/">Snack Packs</a>
+                <Link 
+                to={`/products/${snack_id}`}
+                >Snack Packs</Link>
               </li>
               <li>
-                <a href="/">Gifts</a>
+                <Link to="">Loyalty Program</Link>
               </li>
               <li>
-                <a href="/">Loyalty Program</a>
-              </li>
-              <li>
-                <a href="/">Build Your Own</a>
+                <Link to="">Build Your Own</Link>
               </li>
             </ul>
           </div>

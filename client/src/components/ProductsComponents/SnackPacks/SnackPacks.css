@@ -124,4 +124,8 @@
     .snackpacks .bottomsnackpacks .bottomsnack{
         width: 100%;
     }
+    .snackpacks .bottomtop img{
+        width: 100%;
+        height: 100%;
+    }
 }

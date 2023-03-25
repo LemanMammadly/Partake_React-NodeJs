@@ -12,10 +12,12 @@ import { VarietyPacksContextProvider } from './components/Context/VarietyPacksCo
 import { SnackPacksContextProvider } from './components/Context/SnackPacksContext';
 import { GiftsContextProvider } from './components/Context/GiftsContext';
 import { MerchContextProvider } from './components/Context/MerchContext';
+import { CategoryContextProvider } from './components/Context/CategoryContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <CategoryContextProvider>
     <MerchContextProvider>
     <GiftsContextProvider>
     <SnackPacksContextProvider>
@@ -37,5 +39,6 @@ root.render(
     </SnackPacksContextProvider>
     </GiftsContextProvider>
     </MerchContextProvider>
+    </CategoryContextProvider>
   </React.StrictMode>
 );

@@ -124,4 +124,8 @@
     .gifts .bottomgifts .bottomgif{
         width: 100%;
     }
+    .gifts .bottomtop img{
+        width: 100%;
+        height: 100%;
+    }
 }

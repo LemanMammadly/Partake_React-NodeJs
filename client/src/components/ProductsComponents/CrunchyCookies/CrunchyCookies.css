@@ -122,6 +122,10 @@
 
 
 @media(max-width:576px){
+    .crunchycookies .bottomtop img{
+        width: 100%;
+        height: 100%;
+    }
     .crunchycookies .bottomcrunchycookies .bottombox{
         width: 100%;
     }

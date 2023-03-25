@@ -8,10 +8,6 @@ const SubCategorySchema= new mongoose.Schema(
             type:String,
             unique:true,
             required:true
-        },
-        category:{
-            type:[ObjectId],
-            ref:"Category"
         }
     },
     {timestamps:true}

@@ -124,4 +124,8 @@
     .merch .bottommerchs .bottommerch{
         width: 100%;
     }
+    .merch .bottomtop img{
+        width: 100%;
+        height: 100%;
+    }
 }

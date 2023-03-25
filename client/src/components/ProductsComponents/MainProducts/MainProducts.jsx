@@ -9,7 +9,6 @@ import VarietyPacks from "../VarietyPacks/VarietyPacks";
 import SnackPacks from "../SnackPacks/SnackPacks";
 import Gifts from "../Gifts/Gifts";
 import Merch from "../Merch/Merch";
-import ProdImgBox from "../ProdImgBox/ProdImgBox";
 
 const MainProducts = () => {
   const showdrop = () => {
@@ -114,7 +113,6 @@ const MainProducts = () => {
           <Merch />
         </div>
       </div>
-        <ProdImgBox />
     </section>
   );
 };

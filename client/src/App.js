@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes,Route } from "react-router-dom";
+import ProdSubcategory from "./components/ProductsComponents/ProdSubcategory/ProdSubcategory";
 import ClientLayout from "./layouts/clientLayout/ClientLayout";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
@@ -17,6 +18,7 @@ function App() {
         <Route path="/press" element={<Press/>}/>
         <Route path="/ingredients" element={<Ingredients/>}/>
         <Route path="/products" element={<Products/>}/>
+        <Route path="/products/:id" element={<ProdSubcategory/>}/>
         <Route path="/terms" element={<Terms/>}/>
       </Route>
     </Routes>
