@@ -18,8 +18,8 @@ const getAllCategories=async(req,res,next)=>{
 
 
 const getCategories=async(req,res,next)=>{
-    let category;
     const id=req.params.id;
+    let category;
     try {
         category=await Category.findById(id)
     } catch (error) {

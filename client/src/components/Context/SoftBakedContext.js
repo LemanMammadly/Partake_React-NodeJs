@@ -10,7 +10,7 @@ export const SoftBakedContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3030/product")
+      .get("http://localhost:3050/product")
       .then((res) => setSoftbaked(res.data.products.filter(x=>x.category[0]==="6405b202d5d05f5058793592")))
       .catch((error) => console.log(error));
   }, []);

@@ -10,7 +10,7 @@ export const BestSellerContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3030/product")
+      .get("http://localhost:3050/product")
       .then((res) => setBestseller(res.data.products.filter(x=>x.statusCategory==="6403328368fcefd61e1127ea")))
       .catch((error) => console.log(error));
   }, []);

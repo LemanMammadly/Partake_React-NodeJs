@@ -5,21 +5,21 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 const CategoryContext = createContext();
 
 export const CategoryContextProvider = ({ children }) => {
-  const [category, setCategory] = useState();
-  const [snack, setSnack]=useState();
+  const [category, setCategory] = useState([]);
+  const [snack, setSnack]=useState([]);
 
 
   useEffect(() => {
     axios
-      .get("http://localhost:3030/category")
-      .then((res) => setCategory(res.data))
+      .get("http://localhost:3050/category")
+      .then((res) => setCategory(res.data.categories))
       .catch((error) => console.log(error));
   }, []);
 
 
   useEffect(() => {
     axios
-      .get("http://localhost:3030/category")
+      .get("http://localhost:3050/category")
       .then((res) => setSnack(
          res.data.categories.filter(a=>a._id === "6409b028aad20645b3532c2e")
         ))

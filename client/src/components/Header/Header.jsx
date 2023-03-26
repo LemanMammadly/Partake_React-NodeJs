@@ -8,11 +8,13 @@ import { useCategory } from "../Context/CategoryContext";
 
 const Header = () => {
   const { logo } = useLogo();
-  const {snack}=useCategory([]);
-  
-  const snack_id = snack?.map(item => {
-    return item._id
-  })
+  const { snack } = useCategory();
+
+
+  const snack_id = snack?.map((item) => {
+    return item._id;
+  });
+
   console.log(snack_id);
 
   const location = useLocation();
@@ -33,7 +35,7 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path === "/products") {
+    } else if (path.includes("/products")) {
       document.getElementById("allproduct").style.display = "block";
       document.getElementById("normimg").src = logo[0].img[1];
       document.getElementById("allproduct").style.padding = "-10rem 0";
@@ -62,7 +64,7 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path === "/products") {
+    } else if (path.includes("/products")) {
       document.getElementById("allproduct").style.display = "none";
       document.getElementById("normimg").src = logo[0].img[0];
       document.querySelector(".containerheader").style.backgroundImage =
@@ -90,7 +92,7 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path === "/products") {
+    } else if (path.includes("/products")) {
       document.getElementById("allstory").style.display = "block";
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundImage =
@@ -118,7 +120,7 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path === "/products") {
+    } else if (path.includes("/products")) {
       document.getElementById("allstory").style.display = "none";
       document.getElementById("normimg").src = logo[0].img[0];
       document.querySelector(".containerheader").style.backgroundImage =
@@ -146,7 +148,7 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path === "/products") {
+    } else if (path.includes("/products")) {
       document.getElementById("allblog").style.display = "block";
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundImage =
@@ -174,7 +176,7 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path === "/products") {
+    } else if (path.includes("/products")) {
       document.getElementById("allblog").style.display = "none";
       document.getElementById("normimg").src = logo[0].img[0];
       document.querySelector(".containerheader").style.backgroundImage =
@@ -220,33 +222,44 @@ const Header = () => {
     document.body.classList.add("stop-scrolling");
   };
 
-
   return (
     <header
       className={`containerheader col-12`}
       style={{
         background: window.location.pathname === "/" ? "#fabfa8" : "#fff",
         backgroundImage:
-          window.location.pathname === "/products"
+          window.location.pathname.includes("/products")
             ? "url(https://cdn.shopify.com/s/files/1/0012/2296/7353/files/Untitled_design_-_2022-05-09T181037.683.png?v=1652134275)"
             : " ",
-        paddingBottom: window.location.pathname === "/products" ? "254px" : "",
-        backgroundSize: window.location.pathname === "/products" ? "100%" : "",
+        paddingBottom:
+        window.location.pathname.includes("/products")
+            ? "254px"
+            : "",
+        backgroundSize:
+        window.location.pathname.includes("/products")
+            ? "100%"
+            : "",
         backgroundRepeat:
-          window.location.pathname === "/products" ? "no-repeat" : "",
+        window.location.pathname.includes("/products")
+            ? "no-repeat"
+            : "",
       }}
     >
       <div
         className="hideindesktop"
         style={{
           backgroundImage:
-            window.location.pathname === "/products"
+          window.location.pathname.includes("/products")
               ? "url(https://cdn.shopify.com/s/files/1/0012/2296/7353/files/MA_Partake_5-layers_1.5x.png?v=1640863314)"
               : "",
           backgroundSize:
-            window.location.pathname === "/products" ? "100%" : "",
+          window.location.pathname.includes("/products")
+              ? "100%"
+              : "",
           backgroundPosition:
-            window.location.pathname === "/products" ? "center" : "",
+          window.location.pathname.includes("/products")
+              ? "center"
+              : "",
         }}
       ></div>
       <div className="all d-flex align-items-center justify-content-center col-lg-12 col-12">
@@ -254,15 +267,21 @@ const Header = () => {
           <Link onClick={openMenubar} className="bars">
             <i
               style={{
-                color: window.location.pathname === "/products" ? "white" : "",
+                color:
+                window.location.pathname.includes("/products")
+                    ? "white"
+                    : "",
               }}
               className="fa-solid fa-bars link"
             ></i>
           </Link>
-          <Link className="search" >
+          <Link className="search">
             <i
               style={{
-                color: window.location.pathname === "/products" ? "white" : "",
+                color:
+                window.location.pathname.includes("/products")
+                    ? "white"
+                    : "",
               }}
               onClick={openSearch}
               className="fa-solid fa-magnifying-glass link"
@@ -275,7 +294,7 @@ const Header = () => {
             to="/products"
             onClick={() => window.reload()}
             style={{
-              color: window.location.pathname === "/products" ? "white" : "",
+              color: window.location.pathname.includes('/products') ? "white" : "",
             }}
           >
             Products
@@ -286,7 +305,7 @@ const Header = () => {
             onMouseLeave={hideStory}
             to=""
             style={{
-              color: window.location.pathname === "/products" ? "white" : "",
+              color: window.location.pathname.includes('/products') ? "white" : "",
             }}
           >
             Our Story
@@ -295,7 +314,7 @@ const Header = () => {
             className="link"
             to="/ingredients"
             style={{
-              color: window.location.pathname === "/products" ? "white" : "",
+              color: window.location.pathname.includes('/products') ? "white" : "",
             }}
           >
             Ingredients
@@ -305,7 +324,7 @@ const Header = () => {
           logo.map((logos, _id) => (
             <div className="center col-lg-4 col-6 text-center">
               {window.location.pathname === "/" ||
-              window.location.pathname === "/products" ? (
+              window.location.pathname.includes("/products") ? (
                 <img id="normimg" src={logos.img[0]} alt="" />
               ) : (
                 <img id="normimg" src={logos.img[1]} alt="" />
@@ -318,7 +337,7 @@ const Header = () => {
               className="link"
               to=""
               style={{
-                color: window.location.pathname === "/products" ? "white" : "",
+                color: window.location.pathname.includes('/products') ? "white" : "",
               }}
             >
               Find Us
@@ -329,36 +348,35 @@ const Header = () => {
               onMouseLeave={hideBlog}
               to="/"
               style={{
-                color: window.location.pathname === "/products" ? "white" : "",
+                color: window.location.pathname.includes('/products') ? "white" : "",
               }}
             >
               Blog
             </Link>
           </div>
           <div className="icons">
-              <i className="searchNorm"
-                style={{
-                  color:
-                    window.location.pathname === "/products" ? "white" : "",
-                }}
-                onClick={openSearch}
-                class="fa-solid fa-magnifying-glass link"
-              ></i>
-              <i className="user"
-                style={{
-                  color:
-                    window.location.pathname === "/products" ? "white" : "",
-                }}
-                class="fa-regular fa-user link"
-              ></i>
-              <i
-                style={{
-                  color:
-                    window.location.pathname === "/products" ? "white" : "",
-                }}
-                onClick={openBasket}
-                class="fa-solid fa-dolly link"
-              ></i>
+            <i
+              className="searchNorm"
+              style={{
+                color: window.location.pathname.includes('/products') ? "white" : "",
+              }}
+              onClick={openSearch}
+              class="fa-solid fa-magnifying-glass link"
+            ></i>
+            <i
+              className="user"
+              style={{
+                color: window.location.pathname.includes('/products') ? "white" : "",
+              }}
+              class="fa-regular fa-user link"
+            ></i>
+            <i
+              style={{
+                color: window.location.pathname.includes('/products') ? "white" : "",
+              }}
+              onClick={openBasket}
+              class="fa-solid fa-dolly link"
+            ></i>
           </div>
         </div>
       </div>
@@ -367,12 +385,17 @@ const Header = () => {
           <div className="leftpmenu col-lg-3  text-left mt-3">
             <ul>
               <li>
-                <Link to=''>Best Sellers</Link>
+                <Link to="">Best Sellers</Link>
               </li>
               <li>
-                <Link 
-                to={`/products/${snack_id}`}
-                >Snack Packs</Link>
+                <Link
+                  onMouseEnter={showProducts}
+                  onMouseLeave={hide}
+                  onClick={() => window.reload()}
+                  to={`/products/${snack_id}`}
+                >
+                  Snack Packs
+                </Link>
               </li>
               <li>
                 <Link to="">Loyalty Program</Link>
