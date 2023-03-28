@@ -14,10 +14,12 @@ import { GiftsContextProvider } from './components/Context/GiftsContext';
 import { MerchContextProvider } from './components/Context/MerchContext';
 import { CategoryContextProvider } from './components/Context/CategoryContext';
 import { SubcategoryContextProvider } from './components/Context/SubcategoryContext';
+import { CookiesContextProvider } from './components/Context/CookiesContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <CookiesContextProvider>
     <SubcategoryContextProvider>
     <CategoryContextProvider>
     <MerchContextProvider>
@@ -43,5 +45,6 @@ root.render(
     </MerchContextProvider>
     </CategoryContextProvider>
     </SubcategoryContextProvider>
+    </CookiesContextProvider>
   </React.StrictMode>
 );

@@ -9,13 +9,35 @@ import { useCategory } from "../Context/CategoryContext";
 const Header = () => {
   const { logo } = useLogo();
   const { snack } = useCategory();
-
+  const { variety } = useCategory();
+  const { cookies } = useCategory();
+  const { baking } = useCategory();
+  const { breakfast } = useCategory();
+  const { bestsellerss } = useCategory();
 
   const snack_id = snack?.map((item) => {
     return item._id;
   });
 
-  console.log(snack_id);
+  const variety_id = variety?.map((item) => {
+    return item._id;
+  });
+
+  const cookies_id = cookies?.map((item) => {
+    return item._id;
+  });
+
+  const baking_id = baking?.map((item) => {
+    return item._id;
+  });
+
+  const breakfast_id = breakfast?.map((item) => {
+    return item._id;
+  });
+
+  const bestsellers_id = bestsellerss?.map((item) => {
+    return item._id;
+  });
 
   const location = useLocation();
   const path = location.pathname;
@@ -227,39 +249,32 @@ const Header = () => {
       className={`containerheader col-12`}
       style={{
         background: window.location.pathname === "/" ? "#fabfa8" : "#fff",
-        backgroundImage:
-          window.location.pathname.includes("/products")
-            ? "url(https://cdn.shopify.com/s/files/1/0012/2296/7353/files/Untitled_design_-_2022-05-09T181037.683.png?v=1652134275)"
-            : " ",
-        paddingBottom:
-        window.location.pathname.includes("/products")
-            ? "254px"
-            : "",
-        backgroundSize:
-        window.location.pathname.includes("/products")
-            ? "100%"
-            : "",
-        backgroundRepeat:
-        window.location.pathname.includes("/products")
-            ? "no-repeat"
-            : "",
+        backgroundImage: window.location.pathname.includes("/products")
+          ? "url(https://cdn.shopify.com/s/files/1/0012/2296/7353/files/Untitled_design_-_2022-05-09T181037.683.png?v=1652134275)"
+          : " ",
+        paddingBottom: window.location.pathname.includes("/products")
+          ? "254px"
+          : "",
+        backgroundSize: window.location.pathname.includes("/products")
+          ? "100%"
+          : "",
+        backgroundRepeat: window.location.pathname.includes("/products")
+          ? "no-repeat"
+          : "",
       }}
     >
       <div
         className="hideindesktop"
         style={{
-          backgroundImage:
-          window.location.pathname.includes("/products")
-              ? "url(https://cdn.shopify.com/s/files/1/0012/2296/7353/files/MA_Partake_5-layers_1.5x.png?v=1640863314)"
-              : "",
-          backgroundSize:
-          window.location.pathname.includes("/products")
-              ? "100%"
-              : "",
-          backgroundPosition:
-          window.location.pathname.includes("/products")
-              ? "center"
-              : "",
+          backgroundImage: window.location.pathname.includes("/products")
+            ? "url(https://cdn.shopify.com/s/files/1/0012/2296/7353/files/MA_Partake_5-layers_1.5x.png?v=1640863314)"
+            : "",
+          backgroundSize: window.location.pathname.includes("/products")
+            ? "100%"
+            : "",
+          backgroundPosition: window.location.pathname.includes("/products")
+            ? "center"
+            : "",
         }}
       ></div>
       <div className="all d-flex align-items-center justify-content-center col-lg-12 col-12">
@@ -267,10 +282,9 @@ const Header = () => {
           <Link onClick={openMenubar} className="bars">
             <i
               style={{
-                color:
-                window.location.pathname.includes("/products")
-                    ? "white"
-                    : "",
+                color: window.location.pathname.includes("/products")
+                  ? "white"
+                  : "",
               }}
               className="fa-solid fa-bars link"
             ></i>
@@ -278,10 +292,9 @@ const Header = () => {
           <Link className="search">
             <i
               style={{
-                color:
-                window.location.pathname.includes("/products")
-                    ? "white"
-                    : "",
+                color: window.location.pathname.includes("/products")
+                  ? "white"
+                  : "",
               }}
               onClick={openSearch}
               className="fa-solid fa-magnifying-glass link"
@@ -294,7 +307,9 @@ const Header = () => {
             to="/products"
             onClick={() => window.reload()}
             style={{
-              color: window.location.pathname.includes('/products') ? "white" : "",
+              color: window.location.pathname.includes("/products")
+                ? "white"
+                : "",
             }}
           >
             Products
@@ -305,7 +320,9 @@ const Header = () => {
             onMouseLeave={hideStory}
             to=""
             style={{
-              color: window.location.pathname.includes('/products') ? "white" : "",
+              color: window.location.pathname.includes("/products")
+                ? "white"
+                : "",
             }}
           >
             Our Story
@@ -314,7 +331,9 @@ const Header = () => {
             className="link"
             to="/ingredients"
             style={{
-              color: window.location.pathname.includes('/products') ? "white" : "",
+              color: window.location.pathname.includes("/products")
+                ? "white"
+                : "",
             }}
           >
             Ingredients
@@ -337,7 +356,9 @@ const Header = () => {
               className="link"
               to=""
               style={{
-                color: window.location.pathname.includes('/products') ? "white" : "",
+                color: window.location.pathname.includes("/products")
+                  ? "white"
+                  : "",
               }}
             >
               Find Us
@@ -348,7 +369,9 @@ const Header = () => {
               onMouseLeave={hideBlog}
               to="/"
               style={{
-                color: window.location.pathname.includes('/products') ? "white" : "",
+                color: window.location.pathname.includes("/products")
+                  ? "white"
+                  : "",
               }}
             >
               Blog
@@ -358,7 +381,9 @@ const Header = () => {
             <i
               className="searchNorm"
               style={{
-                color: window.location.pathname.includes('/products') ? "white" : "",
+                color: window.location.pathname.includes("/products")
+                  ? "white"
+                  : "",
               }}
               onClick={openSearch}
               class="fa-solid fa-magnifying-glass link"
@@ -366,13 +391,17 @@ const Header = () => {
             <i
               className="user"
               style={{
-                color: window.location.pathname.includes('/products') ? "white" : "",
+                color: window.location.pathname.includes("/products")
+                  ? "white"
+                  : "",
               }}
               class="fa-regular fa-user link"
             ></i>
             <i
               style={{
-                color: window.location.pathname.includes('/products') ? "white" : "",
+                color: window.location.pathname.includes("/products")
+                  ? "white"
+                  : "",
               }}
               onClick={openBasket}
               class="fa-solid fa-dolly link"
@@ -385,12 +414,15 @@ const Header = () => {
           <div className="leftpmenu col-lg-3  text-left mt-3">
             <ul>
               <li>
-                <Link to="">Best Sellers</Link>
+                <Link
+                  onClick={() => window.reload()}
+                  to={`/products/${bestsellers_id}`}
+                >
+                  Best Sellers
+                </Link>
               </li>
               <li>
                 <Link
-                  onMouseEnter={showProducts}
-                  onMouseLeave={hide}
                   onClick={() => window.reload()}
                   to={`/products/${snack_id}`}
                 >
@@ -407,43 +439,63 @@ const Header = () => {
           </div>
           <div className="rightpmenu col-lg-9">
             <div className="boxes col-lg-12 row">
-              <div className="box col-lg-3">
+              <div className="box col-lg-3 text-center">
                 <img
-                  src="https://cdn.shopify.com/s/files/1/0012/2296/7353/files/Crunchy_Birthday_Cake_Testimonial_c0feafaf-e7e6-4f70-a7ec-3b5d4737ad13.png?v=1642494375w"
+                  className="img-fluid"
+                  src="https://cdn.shopify.com/s/files/1/0012/2296/7353/files/menu-1.png?v=1640771968"
                   alt=""
                 />
-                <br />
-                <Link className="p" to="">
+                <Link
+                  className="p"
+                  onClick={() => window.reload()}
+                  to={`/products/${variety_id}`}
+                >
+                  <br />
                   VARIETY PACKS
                 </Link>
               </div>
-              <div className="box col-lg-3">
+              <div className="box col-lg-3 text-center">
                 <img
-                  src="https://cdn.shopify.com/s/files/1/0012/2296/7353/files/Crunchy_Birthday_Cake_Testimonial_c0feafaf-e7e6-4f70-a7ec-3b5d4737ad13.png?v=1642494375w"
+                  className="img-fluid"
+                  src="https://cdn.shopify.com/s/files/1/0012/2296/7353/files/menu-2.png?v=1640771968"
                   alt=""
                 />
-                <br />
-                <Link className="p" to="">
+                <Link
+                  className="p"
+                  onClick={() => window.reload()}
+                  to={`/products/${cookies_id}`}
+                >
+                  <br />
                   COOKIES
                 </Link>
               </div>
-              <div className="box col-lg-3">
+              <div className="box col-lg-3 text-center">
                 <img
-                  src="https://cdn.shopify.com/s/files/1/0012/2296/7353/files/Crunchy_Birthday_Cake_Testimonial_c0feafaf-e7e6-4f70-a7ec-3b5d4737ad13.png?v=1642494375w"
+                  className="img-fluid"
+                  src="https://cdn.shopify.com/s/files/1/0012/2296/7353/files/Baking_Mixes_Main_Menu_771a0291-8df9-4274-a0d8-5d23b709c8e1.png?v=1642497529"
                   alt=""
                 />
-                <br />
-                <Link className="p" to="">
+                <Link
+                  className="p"
+                  onClick={() => window.reload()}
+                  to={`/products/${baking_id}`}
+                >
+                  <br />
                   BAKING MIXES
                 </Link>
               </div>
-              <div className="box col-lg-3">
+              <div className="box col-lg-3 text-center">
                 <img
-                  src="https://cdn.shopify.com/s/files/1/0012/2296/7353/files/Crunchy_Birthday_Cake_Testimonial_c0feafaf-e7e6-4f70-a7ec-3b5d4737ad13.png?v=1642494375w"
+                  className="img-fluid"
+                  src="https://cdn.shopify.com/s/files/1/0012/2296/7353/files/Breakfast_Mixes_Main_Menu_ceee14d2-324b-4824-ab8e-07945334bfef.png?v=1642497596"
                   alt=""
                 />
-                <br />
-                <Link className="p" to="">
+                <Link
+                  className="p"
+                  onClick={() => window.reload()}
+                  to={`/products/${breakfast_id}`}
+                >
+                  <br />
                   BREAKFAST MIXES
                 </Link>
               </div>

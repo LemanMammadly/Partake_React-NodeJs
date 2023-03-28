@@ -59,7 +59,7 @@ const MainProducts = () => {
           </div>
           <ul
             className="mainul"
-            style={{ opacity: window.screen.width <= 576 ? "0" : "1" }}
+            style={{ opacity: window.screen.width <= 576 ? "0" : "1"}}
           >
             <li className="cookies">
               <Link onClick={showdrop}>
