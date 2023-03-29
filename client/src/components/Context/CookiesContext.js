@@ -8,7 +8,7 @@ export const CookiesContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3050/product")
+      .get("http://localhost:3010/product")
       .then((res) =>
         setCookies(
           res.data.products.filter(

@@ -9,7 +9,7 @@ export const BestSellerContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3050/product")
+      .get("http://localhost:3010/product")
       .then((res) =>
         setBestseller(
           res.data.products.filter(
@@ -22,7 +22,7 @@ export const BestSellerContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3050/product")
+      .get("http://localhost:3010/product")
       .then((res) =>
         setBestsellers(
           res.data.products.filter(

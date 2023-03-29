@@ -26,7 +26,7 @@ const ProdSubcategory = () => {
   const { bestsellerprod } = useBestseller();
 
   let prodArr=[]
-  
+
   
   for (let index = 0; index < snackpacks?.length; index++) {
     const element = snackpacks[index];
@@ -77,17 +77,35 @@ const ProdSubcategory = () => {
 
   for (let index = 0; index < category.length; index++) {
     const element = category[index];
-    console.log(element);
     if (element._id === id) {
       nameProd.push(element.name);
     }
   }
 
+
+    
+  let unique = [];
+  function getUnique(arr, index) {
+    unique = arr
+      .map((e) => e[index])
+
+      // store the keys of the unique objects
+      .map((e, i, final) => final.indexOf(e) === i && i)
+
+      // eliminate the dead keys & store unique objects
+      .filter((e) => arr[e])
+      .map((e) => arr[e]);
+
+    return unique;
+  }
+
+  getUnique(prodArr, "_id");
+
   const { subcategories } = useSubcategory();
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3050/category/${id}`)
+      .get(`http://localhost:3010/category/${id}`)
       .then((res) => setProducts(res.data.category.subcategory))
       .catch((error) => console.log(error));
   }, [id]);
@@ -160,8 +178,8 @@ const ProdSubcategory = () => {
           </div>
           <div className="rightmainsubprods col-lg-9 col-12">
             {
-              prodArr.map((prodArrs,id)=>(
-                <div className="bottomboxsubprod col-lg-12">
+              unique.map((prodArrs,id)=>(
+                <div key={id} className="bottomboxsubprod col-lg-12">
                 <div className="bottomtopsubprod">
                   <img className="img-fluid" src={prodArrs.img[0]} alt="" />
                 </div>

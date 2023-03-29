@@ -10,7 +10,7 @@ export const SubcategoryContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3050/subcategory")
+      .get("http://localhost:3010/subcategory")
       .then((res) => setSubcategory(res.data.subcategories))
       .catch((error) => console.log(error));
   }, []);
