@@ -25,51 +25,56 @@ const ProdSubcategory = () => {
   const { breakfastmix } = useBreakfatsMix();
   const { bestsellerprod } = useBestseller();
 
-  let prodArr=[]
+  let prodArr = [];
 
-  
   for (let index = 0; index < snackpacks?.length; index++) {
     const element = snackpacks[index];
-    if(element.category[0]===id){
-      prodArr.push(element)
+    if (element.category[0] === id) {
+      prodArr.push(element);
     }
   }
 
-    
   for (let index = 0; index < variety?.length; index++) {
     const element = variety[index];
-    if(element.category[0]===id){
-      prodArr.push(element)
+    if (element.category[0] === id) {
+      prodArr.push(element);
     }
   }
 
-      
   for (let index = 0; index < cookies?.length; index++) {
     const element = cookies[index];
-    if(element.category[0]===id || element.category[1]===id || element.category[2]===id){
-      prodArr.push(element)
+    if (
+      element.category[0] === id ||
+      element.category[1] === id ||
+      element.category[2] === id
+    ) {
+      prodArr.push(element);
     }
   }
-
 
   for (let index = 0; index < bakingmix?.length; index++) {
     const element = bakingmix[index];
-    if(element.category[0]===id){
-      prodArr.push(element)
+    if (element.category[0] === id) {
+      prodArr.push(element);
     }
   }
 
   for (let index = 0; index < breakfastmix?.length; index++) {
     const element = breakfastmix[index];
-    if(element.category[0]===id){
-      prodArr.push(element)
+    if (element.category[0] === id) {
+      prodArr.push(element);
     }
   }
 
   for (let index = 0; index < bestsellerprod?.length; index++) {
     const element = bestsellerprod[index];
-    if(element.category[0]===id ||element.category[1]===id || element.category[2]===id  || element.category[3]===id  ){
-      prodArr.push(element)
+    if (
+      element.category[0] === id ||
+      element.category[1] === id ||
+      element.category[2] === id ||
+      element.category[3] === id
+    ) {
+      prodArr.push(element);
     }
   }
 
@@ -82,8 +87,6 @@ const ProdSubcategory = () => {
     }
   }
 
-
-    
   let unique = [];
   function getUnique(arr, index) {
     unique = arr
@@ -140,17 +143,45 @@ const ProdSubcategory = () => {
     }
   };
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const recordsPerPage = 12;
+
+  const lastIndex = currentPage * recordsPerPage;
+  const firstIndex = lastIndex - recordsPerPage;
+
+  const records = unique.slice(firstIndex, lastIndex);
+  const npage = Math.ceil(unique.length / recordsPerPage);
+  const numbers = [...Array(npage + 1).keys()].slice(1);
+
+  function prePage() {
+    if (currentPage !== 1) {
+      setCurrentPage(currentPage - 1);
+    } else if (currentPage === 1) {
+      document.getElementById("prev-item").style.opacity = "0";
+    }
+  }
+
+  function changeCPage(id) {
+    setCurrentPage(id);
+  }
+
+  function nextPage() {
+    if (currentPage !== npage) {
+      setCurrentPage(currentPage + 1);
+    }
+  }
+
   return (
     <>
       <ProductsHeaderText />
       <section className="mainsubprods">
-      <div className="prodName">
-            {nameProd.map((names, id) => (
-              <h2 key={id} className="h2">
-                {names}
-              </h2>
-            ))}
-          </div>
+        <div className="prodName">
+          {nameProd.map((names, id) => (
+            <h2 key={id} className="h2">
+              {names}
+            </h2>
+          ))}
+        </div>
         <div className="allmainsubprods d-flex">
           <div className="leftmainsubprods col-lg-3 col-12">
             <div className="selectionsubprodsdiv" onClick={shopmediadrop}>
@@ -177,9 +208,8 @@ const ProdSubcategory = () => {
             </ul>
           </div>
           <div className="rightmainsubprods col-lg-9 col-12">
-            {
-              unique.map((prodArrs,id)=>(
-                <div key={id} className="bottomboxsubprod col-lg-12">
+            {records.map((prodArrs, id) => (
+              <div key={id} className="bottomboxsubprod col-lg-12">
                 <div className="bottomtopsubprod">
                   <img className="img-fluid" src={prodArrs.img[0]} alt="" />
                 </div>
@@ -222,11 +252,37 @@ const ProdSubcategory = () => {
                   <p className="price">From ${prodArrs.price}</p>
                 </div>
               </div>
-              ))
-            }
+            ))}
           </div>
         </div>
       </section>
+        <nav className={`nav d-flex align-items-center justify-content-center ${unique.length < 12 ? "none" : ""}`}>
+        <div className="pagination">
+          <span className={`page-item ${currentPage === 1 ? "none" : ""}`}>
+            <Link to="" onClick={prePage}>
+              <i id="prev-item" class="fa-solid fa-caret-left"></i>
+            </Link>
+          </span>
+          {numbers.map((n, i) => (
+            <span className={`page-item `} key={i}>
+              <Link
+                to=""
+                className={`pagenum ${
+                  currentPage === n ? "pagenum-active" : ""
+                }`}
+                onClick={() => changeCPage(n)}
+              >
+                {n}
+              </Link>
+            </span>
+          ))}
+          <span className={`page-item ${currentPage === npage ? "none" : ""}`}>
+            <Link to="" onClick={nextPage}>
+              <i class="fa-solid fa-caret-right"></i>
+            </Link>
+          </span>
+        </div>
+      </nav> 
       <ProdImgBox />
       <Aboutsafe />
     </>
