@@ -51,7 +51,8 @@ const Header = () => {
     } else if (
       path === "/about" ||
       path === "/press" ||
-      path === "/ingredients"
+      path === "/ingredients"||
+      path === "/proddetail"
     ) {
       document.getElementById("allproduct").style.display = "block";
       document.getElementById("normimg").src = logo[0].img[1];
@@ -80,7 +81,8 @@ const Header = () => {
     } else if (
       path === "/about" ||
       path === "/press" ||
-      path === "/ingredients"
+      path === "/ingredients"||
+      path === "/proddetail"
     ) {
       document.getElementById("allproduct").style.display = "none";
       document.getElementById("normimg").src = logo[0].img[1];
@@ -108,7 +110,8 @@ const Header = () => {
     } else if (
       path === "/about" ||
       path === "/press" ||
-      path === "/ingredients"
+      path === "/ingredients"||
+      path === "/proddetail"
     ) {
       document.getElementById("allstory").style.display = "block";
       document.getElementById("normimg").src = logo[0].img[1];
@@ -136,7 +139,8 @@ const Header = () => {
     } else if (
       path === "/about" ||
       path === "/press" ||
-      path === "/ingredients"
+      path === "/ingredients"||
+      path === "/proddetail"
     ) {
       document.getElementById("allstory").style.display = "none";
       document.getElementById("normimg").src = logo[0].img[1];
@@ -164,7 +168,8 @@ const Header = () => {
     } else if (
       path === "/about" ||
       path === "/press" ||
-      path === "/ingredients"
+      path === "/ingredients"||
+      path === "/proddetail"
     ) {
       document.getElementById("allblog").style.display = "block";
       document.getElementById("normimg").src = logo[0].img[1];
@@ -192,7 +197,8 @@ const Header = () => {
     } else if (
       path === "/about" ||
       path === "/press" ||
-      path === "/ingredients"
+      path === "/ingredients"||
+      path === "/proddetail"
     ) {
       document.getElementById("allblog").style.display = "none";
       document.getElementById("normimg").src = logo[0].img[1];

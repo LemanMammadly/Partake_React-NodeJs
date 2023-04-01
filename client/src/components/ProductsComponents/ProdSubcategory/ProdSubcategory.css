@@ -92,6 +92,7 @@
 
 
 .mainsubprods .rightmainsubprods .bottomboxsubprod{
+    text-decoration: none;
     position: relative;
     width: 33%;
 }
@@ -157,47 +158,50 @@
 }
 
 
-
-nav .pagination .page-item a{
-    text-decoration: none;
+.navheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-
-.nav .pagination .page-item .pagenum{
+nav  .pagenum{
     color: #005099;
     font-size: 20px;
     border-radius: 50%;
-    padding:10px 17px;
+    padding:10px 20px;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.nav .pagination .pagenum-active{
+nav  .pagenum-active{
     color: #fff !important;
     background-color: #005099;
     border-radius: 50%;
-    padding:10px 17px;
+    font-size: 20px;
+    padding:10px 20px;
     transition: .5s;
 }
 
-.nav .pagination .page-item .pagenum:hover{
+nav  .pagenum:hover{
     color: #fff;
     background-color: #005099;
+    font-size: 20px;
     border-radius: 50%;
-    padding:10px 17px;
+    padding:10px 20px;
     transition: .5s;
 }
 
-nav .pagination .page-item a i{
+nav   i{
     color: #005099;
     font-size: 30px;
 }
 
-nav .pagination .page-item a i:hover{
+nav  i:hover{
     transform: scale(1.1);
     transition: .5s;
 }
+
+
 
 
 @media(max-width:576px){

@@ -108,7 +108,7 @@ const ProdSubcategory = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3010/category/${id}`)
+      .get(`http://localhost:3030/category/${id}`)
       .then((res) => setProducts(res.data.category.subcategory))
       .catch((error) => console.log(error));
   }, [id]);
@@ -156,8 +156,6 @@ const ProdSubcategory = () => {
   function prePage() {
     if (currentPage !== 1) {
       setCurrentPage(currentPage - 1);
-    } else if (currentPage === 1) {
-      document.getElementById("prev-item").style.opacity = "0";
     }
   }
 
@@ -170,6 +168,7 @@ const ProdSubcategory = () => {
       setCurrentPage(currentPage + 1);
     }
   }
+
 
   return (
     <>
@@ -209,7 +208,7 @@ const ProdSubcategory = () => {
           </div>
           <div className="rightmainsubprods col-lg-9 col-12">
             {records.map((prodArrs, id) => (
-              <div key={id} className="bottomboxsubprod col-lg-12">
+              <Link key={id} className="bottomboxsubprod col-lg-12">
                 <div className="bottomtopsubprod">
                   <img className="img-fluid" src={prodArrs.img[0]} alt="" />
                 </div>
@@ -251,38 +250,41 @@ const ProdSubcategory = () => {
                   </div>
                   <p className="price">From ${prodArrs.price}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
-        <nav className={`nav d-flex align-items-center justify-content-center ${unique.length < 12 ? "none" : ""}`}>
-        <div className="pagination">
-          <span className={`page-item ${currentPage === 1 ? "none" : ""}`}>
-            <Link to="" onClick={prePage}>
-              <i id="prev-item" class="fa-solid fa-caret-left"></i>
-            </Link>
+      <nav
+        className={`navheader ${
+          unique.length < 12 ? "none" : ""
+        }`}
+      >
+        <i
+          id="prev-item"
+          onClick={prePage}
+          className={`fa-solid fa-caret-left page-item ${
+            currentPage === 1 ? "none" : ""
+          }`}
+        ></i>
+        {numbers.map((n, i) => (
+          <span
+            key={i}
+            className={`pagenum page-item ${
+              currentPage === n ? "pagenum-active" : ""
+            }`}
+            onClick={() => changeCPage(n)}
+          >
+            {n}
           </span>
-          {numbers.map((n, i) => (
-            <span className={`page-item `} key={i}>
-              <Link
-                to=""
-                className={`pagenum ${
-                  currentPage === n ? "pagenum-active" : ""
-                }`}
-                onClick={() => changeCPage(n)}
-              >
-                {n}
-              </Link>
-            </span>
-          ))}
-          <span className={`page-item ${currentPage === npage ? "none" : ""}`}>
-            <Link to="" onClick={nextPage}>
-              <i class="fa-solid fa-caret-right"></i>
-            </Link>
-          </span>
-        </div>
-      </nav> 
+        ))}
+        <i
+          onClick={nextPage}
+          className={`fa-solid fa-caret-right page-item ${
+            currentPage === npage ? "none" : ""
+          }`}
+        ></i>
+      </nav>
       <ProdImgBox />
       <Aboutsafe />
     </>

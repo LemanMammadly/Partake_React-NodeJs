@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import Ingredients from "./pages/Ingredients/Ingredients";
 import Press from "./pages/Press/Press";
 import Products from "./pages/Products/Products";
+import ProductsDetail from "./pages/ProductsDetail/ProductsDetail";
 import Terms from "./pages/Terms/Terms";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/products" element={<Products/>}/>
         <Route path="/products/:id" element={<ProdSubcategory/>}/>
         <Route path="/terms" element={<Terms/>}/>
+        <Route path="/proddetail/:id" element={<ProductsDetail/>}/>
       </Route>
     </Routes>
     </BrowserRouter>

@@ -1,0 +1,46 @@
+.maindetail .leftmaindetail{
+    background-color: #B9E8FF;
+}
+
+/* .maindetail .leftmaindetail .mainimg{
+    position: relative;
+} */
+
+.maindetail .allminileftimg .imgleft{
+    /* position: absolute; */
+    /* top: 60px;
+    left: 35px; */
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+
+
+.maindetail .allminileftimg .imgleft{
+    float: left;
+    display: block;
+    border: 3px solid #fff;
+    object-fit: contain;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #FFF;
+    padding: 0;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.maindetail .allminileftimg{
+    padding: 55px 40px;
+    display: flex;
+    flex-direction: column !important;
+    column-gap: 15px;
+    position: absolute;
+}
+
+.maindetail .allminileftimg .imgleft img{
+    object-fit: cover;
+    border-radius: 50%;
+    transform: scale(3);
+}
