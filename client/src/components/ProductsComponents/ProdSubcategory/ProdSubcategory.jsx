@@ -208,7 +208,7 @@ const ProdSubcategory = () => {
           </div>
           <div className="rightmainsubprods col-lg-9 col-12">
             {records.map((prodArrs, id) => (
-              <Link key={id} className="bottomboxsubprod col-lg-12">
+              <Link to={`/proddetail/${prodArrs._id}`} key={id} className="bottomboxsubprod col-lg-12">
                 <div className="bottomtopsubprod">
                   <img className="img-fluid" src={prodArrs.img[0]} alt="" />
                 </div>

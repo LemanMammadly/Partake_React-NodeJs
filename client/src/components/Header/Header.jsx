@@ -48,16 +48,6 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (
-      path === "/about" ||
-      path === "/press" ||
-      path === "/ingredients"||
-      path === "/proddetail"
-    ) {
-      document.getElementById("allproduct").style.display = "block";
-      document.getElementById("normimg").src = logo[0].img[1];
-      document.querySelector(".containerheader").style.backgroundColor = "#fff";
-      document.querySelector(".containerheader").style.transition = ".5s";
     } else if (path.includes("/products")) {
       document.getElementById("allproduct").style.display = "block";
       document.getElementById("normimg").src = logo[0].img[1];
@@ -69,6 +59,11 @@ const Header = () => {
       for (let i = 0; i < allLink.length; i++) {
         allLink[i].style.color = "#005099";
       }
+    }else{
+      document.getElementById("allproduct").style.display = "block";
+      document.getElementById("normimg").src = logo[0].img[1];
+      document.querySelector(".containerheader").style.backgroundColor = "#fff";
+      document.querySelector(".containerheader").style.transition = ".5s";
     }
   };
   const hide = () => {
@@ -78,16 +73,6 @@ const Header = () => {
       document.querySelector(".containerheader").style.backgroundColor =
         "#fabfa8";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (
-      path === "/about" ||
-      path === "/press" ||
-      path === "/ingredients"||
-      path === "/proddetail"
-    ) {
-      document.getElementById("allproduct").style.display = "none";
-      document.getElementById("normimg").src = logo[0].img[1];
-      document.querySelector(".containerheader").style.backgroundColor = "#fff";
-      document.querySelector(".containerheader").style.transition = ".5s";
     } else if (path.includes("/products")) {
       document.getElementById("allproduct").style.display = "none";
       document.getElementById("normimg").src = logo[0].img[0];
@@ -98,6 +83,11 @@ const Header = () => {
       for (let i = 0; i < allLink.length; i++) {
         allLink[i].style.color = "#fff";
       }
+    }else{
+      document.getElementById("allproduct").style.display = "none";
+      document.getElementById("normimg").src = logo[0].img[1];
+      document.querySelector(".containerheader").style.backgroundColor = "#fff";
+      document.querySelector(".containerheader").style.transition = ".5s";
     }
   };
 
@@ -107,17 +97,7 @@ const Header = () => {
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (
-      path === "/about" ||
-      path === "/press" ||
-      path === "/ingredients"||
-      path === "/proddetail"
-    ) {
-      document.getElementById("allstory").style.display = "block";
-      document.getElementById("normimg").src = logo[0].img[1];
-      document.querySelector(".containerheader").style.backgroundColor = "#fff";
-      document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path.includes("/products")) {
+    }  else if (path.includes("/products")) {
       document.getElementById("allstory").style.display = "block";
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundImage =
@@ -127,6 +107,11 @@ const Header = () => {
       for (let i = 0; i < allLink.length; i++) {
         allLink[i].style.color = "#005099";
       }
+    }else{
+      document.getElementById("allstory").style.display = "block";
+      document.getElementById("normimg").src = logo[0].img[1];
+      document.querySelector(".containerheader").style.backgroundColor = "#fff";
+      document.querySelector(".containerheader").style.transition = ".5s";
     }
   };
   const hideStory = () => {
@@ -136,17 +121,7 @@ const Header = () => {
       document.querySelector(".containerheader").style.backgroundColor =
         "#fabfa8";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (
-      path === "/about" ||
-      path === "/press" ||
-      path === "/ingredients"||
-      path === "/proddetail"
-    ) {
-      document.getElementById("allstory").style.display = "none";
-      document.getElementById("normimg").src = logo[0].img[1];
-      document.querySelector(".containerheader").style.backgroundColor = "#fff";
-      document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path.includes("/products")) {
+    }else if (path.includes("/products")) {
       document.getElementById("allstory").style.display = "none";
       document.getElementById("normimg").src = logo[0].img[0];
       document.querySelector(".containerheader").style.backgroundImage =
@@ -156,21 +131,16 @@ const Header = () => {
       for (let i = 0; i < allLink.length; i++) {
         allLink[i].style.color = "#fff";
       }
+    }else{
+      document.getElementById("allstory").style.display = "none";
+      document.getElementById("normimg").src = logo[0].img[1];
+      document.querySelector(".containerheader").style.backgroundColor = "#fff";
+      document.querySelector(".containerheader").style.transition = ".5s";
     }
   };
 
   const showBlog = () => {
     if (path === "/") {
-      document.getElementById("allblog").style.display = "block";
-      document.getElementById("normimg").src = logo[0].img[1];
-      document.querySelector(".containerheader").style.backgroundColor = "#fff";
-      document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (
-      path === "/about" ||
-      path === "/press" ||
-      path === "/ingredients"||
-      path === "/proddetail"
-    ) {
       document.getElementById("allblog").style.display = "block";
       document.getElementById("normimg").src = logo[0].img[1];
       document.querySelector(".containerheader").style.backgroundColor = "#fff";
@@ -185,6 +155,11 @@ const Header = () => {
       for (let i = 0; i < allLink.length; i++) {
         allLink[i].style.color = "#005099";
       }
+    }else{
+      document.getElementById("allblog").style.display = "block";
+      document.getElementById("normimg").src = logo[0].img[1];
+      document.querySelector(".containerheader").style.backgroundColor = "#fff";
+      document.querySelector(".containerheader").style.transition = ".5s";
     }
   };
   const hideBlog = () => {
@@ -194,17 +169,7 @@ const Header = () => {
       document.querySelector(".containerheader").style.backgroundColor =
         "#fabfa8";
       document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (
-      path === "/about" ||
-      path === "/press" ||
-      path === "/ingredients"||
-      path === "/proddetail"
-    ) {
-      document.getElementById("allblog").style.display = "none";
-      document.getElementById("normimg").src = logo[0].img[1];
-      document.querySelector(".containerheader").style.backgroundColor = "#fff";
-      document.querySelector(".containerheader").style.transition = ".5s";
-    } else if (path.includes("/products")) {
+    }else if (path.includes("/products")) {
       document.getElementById("allblog").style.display = "none";
       document.getElementById("normimg").src = logo[0].img[0];
       document.querySelector(".containerheader").style.backgroundImage =
@@ -214,6 +179,11 @@ const Header = () => {
       for (let i = 0; i < allLink.length; i++) {
         allLink[i].style.color = "#fff";
       }
+    }else{
+      document.getElementById("allblog").style.display = "none";
+      document.getElementById("normimg").src = logo[0].img[1];
+      document.querySelector(".containerheader").style.backgroundColor = "#fff";
+      document.querySelector(".containerheader").style.transition = ".5s";
     }
   };
 
