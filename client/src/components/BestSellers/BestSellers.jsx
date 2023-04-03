@@ -10,20 +10,21 @@ const BestSellers = () => {
   const { bestseller } = useBestseller();
 
   const options = {
-    margin: 30,
-    responsiveClass: true,
-    nav: false,
-    autoplay: true,
-    smartSpeed: 1000,
-    responsive: {
-      0: {
-        items: 1,
+
+    margin:30,
+    responsiveClass:true,
+    nav:false,
+    autoplay:true,
+    smartspeed:1000,
+    respomsive:{
+      0:{
+        items:1,
       },
-      400: {
-        items: 1,
+      400:{
+        items:1
       },
-      600: {
-        items: 2,
+      600:{
+        items:2
       },
       700: {
         items: 3,
